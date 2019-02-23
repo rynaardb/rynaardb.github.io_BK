@@ -4,6 +4,7 @@ title: "Getting started with Vapor"
 date: 2019-02-08
 categories: posts
 classes: wide
+tags: vapor server-side swift
 ---
 
 Getting started with [Vapor](https://vapor.codes) is really easy thanks to the handy Vapor Toolbox and well written [documentation](https://docs.vapor.codes/3.0/).

@@ -4,6 +4,7 @@ title: "Basic UIView Animations"
 date: 2019-02-16
 categories: posts
 classes: wide
+tags: ios swift
 ---
 
 Subtle and concise animations can help draw the user’s attention to a specific area of your application. Often times it may be unclear to the user when to perform a certain action or as to what is going on after a specific task / action was completed. This is where well thought out animations can be very useful.
