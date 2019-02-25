@@ -30,7 +30,7 @@ Microservices offers a number of benefits some of which includes:
 
 ## The API Gateway
 
-As illustrated below, the API Gateway is the external interface and entry point to communicate with all the internal services. It is the API Gateway's responsibility to check and forward each request to the relevant internal services.
+As illustrated below, the API Gateway is the external interface and entry point to communicate with all the internal services. It is the API Gateway's responsibility to check and route each request to the relevant internal services.
 
 ![image](/assets/images/microservices-api-gateway.png)
 
