@@ -18,7 +18,7 @@ Vapor has a number of packages providing support for the following:
 * Auth
 * JWT
 
-## What is Microservices?
+## What is Microservices Architecture?
 
 A definition of Microservices from [Wikipedia](https://en.wikipedia.org/wiki/Microservices):
 
@@ -32,7 +32,7 @@ Microservices offers a number of benefits some of which includes:
 
 * Clear separation of concerns
 * Each service can be deployed independently
-* Promotes continues integration and delivery
+* Promotes continuous integration and delivery
 * Easier to test (when implemented correctly)
 * Works great with Docker and Kubernetes
 * Scalable
@@ -93,9 +93,9 @@ Each functional area of the application is implemented by its own microservice e
 
 Services might also use asynchronous, message-based communication for inter-service communication using for example the [AMQP Protocol](https://www.amqp.org).
 
-So let's have a look at how a very basic user microservice in example used could look like in Vapor.
+So, let's have a look at how a very basic user microservice can be implemented in Vapor.
 
-First we need to configure the routes for the user service:
+First, we need to configure the routes for the user service:
 
 ```swift
 public func routes(_ router: Router) throws {
@@ -104,7 +104,7 @@ public func routes(_ router: Router) throws {
 }
 ```
 
-The user service have two endpoints, one to register a new user and one to retrieve an existing user:
+The user service has two endpoints, one to register a new user and one to retrieve an existing user:
 
 ```swift
 struct UserController: RouteCollection {
@@ -137,3 +137,8 @@ private extension UserController {
 }
 ```
 As with every other architecture out there, there is no silver bullet and microservices is no exception. The Microservices architectures has many drawbacks ranging from added deployment complexity to testing which should be taken into consideration during the planning phases of your project. With that said it is still a great choice for complex, evolving applications despite drawbacks and implementation challenges.
+
+Here are links to my GitHub repositories containing the example code:
+
+* [vapor-microservices-api-gateway](https://github.com/rynaardb/vapor-microservices-api-gateway)
+* [vapor-microservices-user-service](https://github.com/rynaardb/vapor-microservices-user-service)
