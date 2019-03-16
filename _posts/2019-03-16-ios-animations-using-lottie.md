@@ -64,7 +64,7 @@ In some cases you might want to do a little bit more than just playing the anima
 }
 ```
 
-The example Xcode project can be found on my GitHub [repository]().
+The example Xcode project can be found on my GitHub [repository](https://github.com/rynaardb/ios-animations-using-lottie).
 
 ## Lottie Files
 
