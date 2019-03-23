@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Modern Objective-C and Swift documentation with Jazzy"
+title: "Swift and Objective-C documentation with Jazzy"
 date: 2019-03-23
 categories: posts
 classes: wide
