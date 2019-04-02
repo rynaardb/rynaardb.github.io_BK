@@ -167,4 +167,5 @@ As with any other programming paradigm functional programming is not a "one size
 
 ## Additional Resources
 
-[Swift and the Legacy of Functional Programming by Rob Napier](https://academy.realm.io/posts/tryswift-rob-napier-swift-legacy-functional-programming/)
+[Swift and the Legacy of Functional Programming by Rob Napier](https://academy.realm.io/posts/tryswift-rob-napier-swift-legacy-functional-programming/)\
+[Persist data structure](https://en.wikipedia.org/wiki/Persistent_data_structure)
