@@ -1,10 +1,10 @@
 ---
 layout: single
 title: "Functional Programming in Swift"
-date: 2019-03-23
+date: 2019-04-02
 categories: posts
 classes: wide
-tags: swift functional programming swiftlang ios
+tags: swift functional programming swiftlang ios functions
 ---
 
 Functional programming is a programming paradigm and perhaps even more so a mindset which helps you  structure your programs into separate functions. These functions take some input and returns the computed output based on the given input. The most important aspects of functional programming are to prevent side effects and to avoid mutating global state.
@@ -104,7 +104,7 @@ Our `dcCharacters` array in the above example is now a constant making it immuta
 
 Enter [persistent data structures](https://en.wikipedia.org/wiki/Persistent_data_structure). A persistent data structure is a data structure allowing you to always preserves the previous version of itself when it is modified. Using the correct persistent data structure, you no longer have to create an entirely new copy of the data structure just to mutate for example one value in an array.
 
-The usage of persistent data structures is beyond the scope of this article, but I would strongly suggest that you look into [hash trees](https://en.wikipedia.org/wiki/Hash_tree_persistent_data_structure) and [linked lists](https://en.wikipedia.org/wiki/Linked_list).
+The usage of persistent data structures is beyond the scope of this article, but I would suggest diving deeper into [hash trees](https://en.wikipedia.org/wiki/Hash_tree_persistent_data_structure) and [linked lists](https://en.wikipedia.org/wiki/Linked_list).
 
 ## First-class and higher-order functions
 
