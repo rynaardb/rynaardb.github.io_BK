@@ -82,7 +82,7 @@ print(superHero(character: "Superman", skillLevel: 500)) // This will always pro
 
 Here the `superHero` function is only concerned about its own input which is turn computes and return the output based on the input given. The output of this function will always be the same given the same input, again making it predictable.
 
-## In-place mutation is dangerous
+## Dangers of in-place mutation
 
 As we've seen, in-place mutation is never a good idea and leads to all sorts of unpredictable behavior which is hard to debug. More often than not you make assumptions of what the data should look like but somewhere in your code you mutated a value and forgotten about it. 
 
