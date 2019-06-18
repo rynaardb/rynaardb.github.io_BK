@@ -7,10 +7,6 @@ classes: wide
 tags: swift swiftui ios declarative programming wwdc2019 wwdc19 xcode11 combine previews
 ---
 
-<p align="center"> 
-<img src="/assets/images/swiftui-logo.png">
-</p>
-
 [SwiftUI](https://developer.apple.com/xcode/swiftui/), a declarative UI programming framework introduced by Apple during WWDC 2019 aims to provide a shorter path to building great user interfaces across Apple platforms.
 
 With SwiftUI you learn the concepts once and apply it everywhere across all platforms i.e. iOS, iPadOS, watchOS, macOS.
