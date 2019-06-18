@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "SwiftUI - In One Minute"
+title: "SwiftUI in one minute"
 date: 2019-06-14
 categories: posts
 classes: wide
