@@ -7,8 +7,6 @@ classes: wide
 tags: swift package manager swift-package-manager spm swift-packages swift-server-side swift-dependencies ios programming xcode11
 ---
 
-# Swift Package Manager - Creating Packages
-
 Swift Package Manager, or SPM, is a tool for managing the distribution of Swift code. It is also a great tool to manage your project dependencies, allowing you to import third-party frameworks or those you developed yourself.
 
 Now that SPM is a first class citizen as from Xcode 11 and we are starting to see some adoption, I think it is time to have a deeper look from both a consumer and library author perspective.
