@@ -14,7 +14,7 @@ tags: ios swift objective-c jazzy documentation xcode code clang sourcekit ast
 To install jazzy simply install the ruby gem:
 
 ```bash
-sudo gem install ruby
+sudo gem install jazzy
 ```
 ## Adding code documentation
 
