@@ -156,13 +156,13 @@ Alternatively, you can also use a local path to refer to a package rather than a
 Finally you can also refer to a specific branch:
 
 ```swift
-.package (url: "https://github.com/krzyzanowskim/CryptoSwift.git", .branch: "master")
+.package (url: "https://github.com/krzyzanowskim/CryptoSwift.git", .branch("master"))
 ```
 
 or an exact commit:
 
 ```swift 
-.package (url: "https://github.com/krzyzanowskim/CryptoSwift.git", .revision: " a44caef0550c346e0ab9172f7c9a3852c1833599")
+.package (url: "https://github.com/krzyzanowskim/CryptoSwift.git", .revision("a44caef0550c346e0ab9172f7c9a3852c1833599"))
 ```
 
 ## A note on dependency versioning
