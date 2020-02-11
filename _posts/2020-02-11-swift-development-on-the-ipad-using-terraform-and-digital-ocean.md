@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Setting up a remote machine for Swift development on the iPad with Terraform and Digital Ocean"
+title: "Swift Development on the iPad using Terraform and Digital Ocean"
 date: 2020-02-11
 categories: posts
 classes: wide
