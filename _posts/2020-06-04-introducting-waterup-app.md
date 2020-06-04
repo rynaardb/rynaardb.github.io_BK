@@ -4,16 +4,16 @@ title: "Introducing WaterUP - A standalone watchOS water tracking app developed 
 date: 2020-06-04
 categories: posts
 gallery:
-  - url: /assets/images/waterup-screenshot1.jpg
-    image_path: /assets/images/waterup-screenshot1.jpg
+  - url: /assets/images/waterup-screenshot1.png
+    image_path: /assets/images/waterup-screenshot1.png
     alt: "screenshot1"
     title: WaterUp screenshot1"
   - url: /assets/images/waterup-screenshot2.jpg
-    image_path: /assets/images/waterup-screenshot2.jpg
+    image_path: /assets/images/waterup-screenshot2.png
     alt: "screenshot2"
     title: WaterUp screenshot2"
-  - url: /assets/images/waterup-screenshot3.jpg
-    image_path: /assets/images/waterup-screenshot3.jpg
+  - url: /assets/images/waterup-screenshot3.png
+    image_path: /assets/images/waterup-screenshot3.png
     alt: "screenshot3"
     title: WaterUp screenshot3"
 tags: apple swiftui swift-development development swift watchos watchos-development watch-development apple-watch swiftui-app healthit standalone watchos app
