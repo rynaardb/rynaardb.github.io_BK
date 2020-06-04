@@ -4,10 +4,10 @@ title: "Introducing WaterUP - A standalone watchOS water tracking app developed 
 date: 2020-06-04
 categories: posts
 gallery:
-  - image_path: /assets/images/waterup-screenshot1.png
+  - image_path: /assets/images/waterup-screenshot2.png
     alt: "screenshot1"
     title: WaterUp screenshot1"
-  - image_path: /assets/images/waterup-screenshot2.png
+  - image_path: /assets/images/waterup-screenshot1.png
     alt: "screenshot2"
     title: WaterUp screenshot2"
   - image_path: /assets/images/waterup-screenshot3.png
