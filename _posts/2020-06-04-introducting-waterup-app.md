@@ -19,9 +19,9 @@ gallery:
 tags: apple swiftui swift-development development swift watchos watchos-development watch-development apple-watch swiftui-app healthit standalone watchos app
 ---
 
-{% include gallery caption="WaterUP - Water Tracker for Apple Watch" %}
-
 I recently [published](https://apps.apple.com/app/waterup-water-tracker/id1483094866) my first standalone watchOS app for Apple Watch called WaterUP, using SwiftUI.
+
+{% include gallery caption="WaterUP - Water Tracker for Apple Watch" %}
 
 WaterUP tracks your daily water intake and reminds you to drink water and stay hydrated throughout the day. Having suffered from kidney stones in the past I know firsthand how important it is to stay hydrated. Just thinking about the pain alone is enough reason for me to make sure I stay hydrated. Spending so much time sitting in front of my computer screen coding away it becomes really easy to forget to stay hydrated. And no, coffee doesn't count 😁
 
