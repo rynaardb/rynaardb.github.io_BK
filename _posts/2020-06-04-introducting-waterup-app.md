@@ -20,7 +20,7 @@ I recently [published](https://apps.apple.com/app/waterup-water-tracker/id148309
 
 {% include gallery caption="WaterUP - Water Tracker for Apple Watch" %}
 
-WaterUP tracks your daily water intake and reminds you to drink water and stay hydrated throughout the day. Having suffered from kidney stones in the past I know firsthand how important it is to stay hydrated. Just thinking about the pain alone is enough reason for me to make sure I stay hydrated. Spending so much time sitting in front of my computer screen coding away it becomes really easy to forget to stay hydrated. And no, coffee doesn't count 😁
+WaterUP tracks your daily water intake and reminds you to drink water and stay hydrated throughout the day. Having suffered from kidney stones in the past I know firsthand how important it is to stay hydrated. Just thinking about the pain alone is enough reason for me to make sure I stay hydrated. Spending so much time sitting in front of my computer screen coding away it becomes really easy to forget to stay hydrated. And no, coffee doesn't count.
 
 Before I came up with the idea to actually develop WaterUP, I looked around on the App Store and couldn't really find any apps that is just simple and to the point. All I wanted was to log my water intake and set my schedule to be reminded via push notifications. Also, I wanted this to be a standalone watchOS app and to not have to worry about an iOS companion app which I will most likely never use.
 
