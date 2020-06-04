@@ -13,6 +13,15 @@ gallery:
   - image_path: /assets/images/waterup-screenshot3.png
     alt: "screenshot3"
     title: WaterUp screenshot3"
+  - image_path: /assets/images/waterup-screenshot4.png
+    alt: "screenshot4"
+    title: WaterUp screenshot4"
+  - image_path: /assets/images/waterup-screenshot5.png
+    alt: "screenshot5"
+    title: WaterUp screenshot5"
+  - image_path: /assets/images/waterup-screenshot6.png
+    alt: "screenshot6"
+    title: WaterUp screenshot6"
 tags: apple swiftui swift-development development swift watchos watchos-development watch-development apple-watch swiftui-app healthit standalone watchos app
 ---
 
