@@ -22,7 +22,7 @@ gallery:
   - image_path: /assets/images/waterup-screenshot6.png
     alt: "screenshot6"
     title: WaterUp screenshot6"
-tags: apple swiftui swift-development development swift watchos watchos-development watch-development apple-watch swiftui-app healthit standalone watchos app
+tags: apple swiftui swift-development development swift watchos watchos-development watch-development apple-watch swiftui-app healthkit standalone watchos app
 ---
 
 I recently [published](https://apps.apple.com/app/waterup-water-tracker/id1483094866) my first standalone watchOS app for Apple Watch called WaterUP, using SwiftUI.
