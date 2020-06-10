@@ -24,7 +24,7 @@ Looking at the error description for `ITMS-90683` it's basically saying that hey
 
 The biggest issue with the error description for `ITMS-90683` is that it doesn't tell you **which** Info.plist file it's referring to making it very misleading and troublesome to debug.
 
-In order to resolve this, you simply need to add another Info.plist under the root location of your Xcode project as seen below:
+In order to resolve this, you simply need to manually add another Info.plist under the root level of your Xcode project as seen below:
 
 ![image](/assets/images/ITMS-90683-watchos-standalone-app-1.png)
 
@@ -36,6 +36,6 @@ That's it, that will satisfy the App Store Connect upload API and you should be 
 
 ## Conclusion
 
-It seems just like iOS apps the App Store Connect upload API expects the Info.plist containing the HealtKit usages keys like `NSHealthShareUsageDescription` to be present at project root level.
+It seems just like iOS apps you need to have an Info.plist containing the HealthKit usages keys like `NSHealthShareUsageDescription` to be present at project root level.
 
 In the future I hope Apple will update the Xcode template for standalone watchOS apps to include the additional Info.plist file in the project root or at the very least document this small, yet very important detail somewhere in the documentation.
