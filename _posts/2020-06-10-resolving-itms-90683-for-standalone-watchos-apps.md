@@ -36,6 +36,6 @@ That's it, that will satisfy the App Store Connect upload API and you should be 
 
 ## Conclusion
 
-It seems just like iOS apps you need to have an Info.plist containing the HealthKit usages keys like `NSHealthShareUsageDescription` to be present at project root level.
+It seems just like iOS apps you need to have a Info.plist file containing the HealthKit usages keys like `NSHealthShareUsageDescription` to be present at project root level.
 
 In the future I hope Apple will update the Xcode template for standalone watchOS apps to include the additional Info.plist file in the project root or at the very least document this small, yet very important detail somewhere in the documentation.
