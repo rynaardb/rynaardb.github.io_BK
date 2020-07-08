@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Essential Xcode keyboard shortcuts for increased productivity"
-date: 2020-07-10
+date: 2020-07-08
 categories: posts
 tags: apple swiftui swift-development development swift ios essential xcode keyboard shortcuts productivity tips tricks
 ---
