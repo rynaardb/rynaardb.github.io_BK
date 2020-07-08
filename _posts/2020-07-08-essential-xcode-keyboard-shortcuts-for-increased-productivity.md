@@ -94,6 +94,7 @@ Below is a table and overview of some of the most useful and frequently used key
 | Editor     | Balance indentation                    | ⌃ + I         |
 | Editor     | Delete line                            | ⌘ + D         |
 | Editor     | Open library                           | ⇧ + ⌘ + L     |
+| Editor     | Generate documentation                 | ⌥ + ⌘ + /     |
 | Navigation | Open quickly                           | ⇧ + ⌘ + O     |
 | Navigation | Switch tabs left                       | ⇧ + ⌘ + [     |
 | Navigation | Switch tabs right                      | ⇧ + ⌘ + ]     |
