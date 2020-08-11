@@ -63,7 +63,7 @@ Server starting on http://localhost:8080
 
 ### Working with Xcode
 
-Since Vapor leans on Swift Package Manager you don't really need Xcode to get started with Vapor. You could in fact use any Text Editor of choice especially if you're not running macOS. If you are however running macOS you would most probably want to use Xcode by creating an Xcode project:
+Since Vapor leans on Swift Package Manager you don't need Xcode to get started with Vapor. You could use any Text Editor of your choice especially if you're not running macOS. If you are however running macOS you would most probably want to use Xcode by creating an Xcode project:
 
 ```bash
 vapor xcode
