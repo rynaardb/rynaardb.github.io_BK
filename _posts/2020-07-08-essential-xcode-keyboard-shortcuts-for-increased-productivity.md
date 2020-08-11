@@ -8,21 +8,21 @@ tags: apple swiftui swift-development development swift ios essential xcode keyb
 
 As iOS developers, we spend a considerable amount of time in Xcode, so it’s worth taking some time to know your way around Xcode.
 
-Knowing how to edit, search effectively and how to navigate you project in Xcode goes a long way to increase your productivity.
+Knowing how to edit, search effectively, and how to navigate your project in Xcode goes a long way to increase your productivity.
 
-Taking the time to memorise and practice these shortcuts will save you a lot of time having to reach for you mouse and will allow you to keep both your hands on the keyboard, more often.
+Taking the time to memorize and practice these shortcuts will save you a lot of time having to reach for your mouse and will allow you to keep both your hands on the keyboard, more often.
 
-Let's have a look at a few essential keyboard shortcuts which is easy to remember yet will save you a lot of time once you've memorised them.
+Let's have a look at a few essential keyboard shortcuts which is easy to remember yet will save you a lot of time once you've memorized them.
 
 ## Editor shortcuts
 
-We spend the majority of our time in Xcode using the editor, writing code. So it only make sense to know a couple of basic keyboard shortcuts when writing and editing your code.
+We spend the majority of our time in Xcode using the editor, writing code. So it only makes sense to know a couple of basic keyboard shortcuts when writing and editing your code.
 
 ### Moving lines up and down (⌥ + ⌘ + [ and ])
 
 For the longest time I was selecting the lines of code, cutting it, go to the line where I want to move it to and paste it there. Somewhere in between also required some backspacing and entering to make space for the lines pasted.
 
-With these two shortcuts you can do it all in one go, a great time saver especially rearranging and moving code around in SwiftUI.
+With these two shortcuts, you can do it all in one go, a great time saver especially rearranging and moving code around in SwiftUI.
 
 ![image](/assets/images/xcode-kb-shortcut-move-lines.gif)
 
@@ -34,37 +34,37 @@ Another useful keyboard shortcut to help you keep your code clean and neatly for
 
 ## Navigation shortcuts
 
-Knowing how to navigate effectively within Xcode can help you switch contexts quickly. It can also help you find what your looking for without manually searching for it.
+Knowing how to navigate effectively within Xcode can help you switch contexts quickly. It can also help you find what you looking for without manually searching for it.
 
 ### Quickly open (⇧ + ⌘ + O)
 
 This keyboard shortcut is the one I use most frequently, all the time. Instead of manually navigating and searching for a file in the project navigation you can use the open quickly keyboard shortcut.
 
-It works great for just about anything you want to navigate to, including files, types, functions etc.
+It works great for just about anything you want to navigate to, including files, types, functions, etc.
 
 ![image](/assets/images/xcode-kb-shortcut-open-quickly.gif)
 
 ### Jump to definition (⌃ + ⌘ + J)
 
-Another keyboard shortcut I use often is to jump to the definition of a type, function etc. Simply set your cursor on, for example, the type or function that you what to jump to and press `⌃ + ⌘ + J`.
+Another keyboard shortcut I use often is to jump to the definition of a type, function, etc. Simply set your cursor on, for example, the type or function that you what to jump to and press `⌃ + ⌘ + J`.
 
 ![image](/assets/images/xcode-kb-shortcut-jump-to-definition.gif)
 
 ## Views shortcuts
 
-Additional views like the project navigator, inspectors, preview and debug area can be useful but not always needed. Often times they take up a lot of screen real estate when not needed, especially when you're working on a smaller screen. Knowing how to hide and show these views as needed can free up a lot of screen space for the editor, allowing you to see more of your code.
+Additional views like the project navigator, inspectors, preview, and debug area can be useful but not always needed. Often times they take up a lot of screen real estate when not needed, especially when you're working on a smaller screen. Knowing how to hide and show these views as needed can free up a lot of screen space for the editor, allowing you to see more of your code.
 
 ### Toggle canvas / preview  (⌥ + ⌘ + ↩)
 
-This keyboard shortcut is extremely useful when working with SwiftUI when you want to show / hide the preview.
+This keyboard shortcut is extremely useful when working with SwiftUI when you want to show/hide the preview.
 
 ![image](/assets/images/xcode-kb-shortcut-toggle-canvas.gif)
 
 ### Open library (⇧ + ⌘ + L)
 
-Another frequent action is to open the library to insert code snippets, images, add view modifiers etc.
+Another frequent action is to open the library to insert code snippets, images, add view modifiers, etc.
 
-Using the library is also a great way to see what modifiers is available for a given view in SwiftUI.
+Using the library is also a great way to see what modifiers are available for a given view in SwiftUI.
 
 ![image](/assets/images/xcode-kb-shortcut-open-library.gif)
 
