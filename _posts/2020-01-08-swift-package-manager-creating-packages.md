@@ -9,18 +9,18 @@ tags: swift package manager swift-package-manager spm swift-packages swift-serve
 
 Swift Package Manager, or SPM, is a tool for managing the distribution of Swift code. It is also a great tool to manage your project dependencies, allowing you to import third-party frameworks or those you developed yourself.
 
-Now that SPM is a first class citizen as from Xcode 11 and we are starting to see some adoption, I think it is time to have a deeper look from both a consumer and library author perspective.
+Now that SPM is a first-class citizen as from Xcode 11 and we are starting to see some adoption, I think it is time to have a deeper look from both a consumer and a library author perspective.
 
-In this post we’ll have a look at how to get started using SPM creating a basic package that we can share with others or use as a dependency in your own projects. 
+In this post, we’ll have a look at how to get started using SPM creating a basic package that we can share with others or use as a dependency in your own projects. 
 
 ## What is a package?
 
-A Swift Package is essentially a collection of source files and assets compiled and package up into a single [Module]( https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html ), which can in turn be added as a dependency in another project. Your project may contain one or multiple packages.
+A Swift Package is essentially a collection of source files and assets compiled and package up into a single [Module]( https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html ), which can, in turn, be added as a dependency in another project. Your project may contain one or multiple packages.
 
 
 ## Creating a Swift package
 
-Let’s assume that we want to create an encryption / decryption library that we’d like to share with others. The first step when creating a new package is to create a new folder with the name of the package that you’d like to create, for example:
+Let’s assume that we want to create an encryption/decryption library that we’d like to share with others. The first step when creating a new package is to create a new folder with the name of the package that you’d like to create, for example:
 
 ``` bash
 mkdir CipherKit
@@ -45,11 +45,11 @@ Creating Tests/CipherKitTests/CipherKitTests.swift
 Creating Tests/CipherKitTests/XCTestManifests.swift
 ```
 
-**TIP: Remember to name the folder accordingly as SPM will use the name of the folder as the actual package name when you don’t specify the name of the package manually. To manually specifcy the name of the package, use the `--name parameter`**
+**TIP: Remember to name the folder accordingly as SPM will use the name of the folder as the actual package name when you don’t specify the name of the package manually. To manually specify the name of the package, use the `--name parameter`**
 
 ### Types of packages
 
-By default SPM will initialize a static library package type when running the default initialize command. 
+By default, SPM will initialize a static library package type when running the default initialize command. 
 
 You can manually specify the type of package you’d like to create using the `--type` parameter. As of the time of writing this post the following types of packages are supported:
 
@@ -63,7 +63,7 @@ For example, we can initialize a new executable package using the following comm
 
 `swift package init --type executable`
 
-You can run the following command to get list of  available options when initializing a new package:
+You can run the following command to get a list of  available options when initializing a new package:
 
 `swift package init --help`
 
@@ -77,7 +77,7 @@ OPTIONS:
 
 ### The manifest file
 
-Running the initialize command will create the initial structure of our package, including the manifest file contained in `Package.swift`. The manifest files contains important information about the package’s metadata, targets, products and external dependencies.
+Running the initialize command will create the initial structure of our package, including the manifest file contained in `Package.swift`. The manifest files contain important information about the package’s metadata, targets, products, and external dependencies.
 
 Have a look at the contents of `Package.swift` which should look something like this:
 
@@ -116,7 +116,7 @@ let package = Package(
 
 ## Adding external dependencies
 
-Next let’s add a remote dependency to our `CipherKit` library using another open source crypto library called [CryptoSwift]( https://github.com/krzyzanowskim/CryptoSwift.git ), hosted on GitHub:
+Next, let’s add a remote dependency to our `CipherKit` library using another open-source crypto library called [CryptoSwift]( https://github.com/krzyzanowskim/CryptoSwift.git ), hosted on GitHub:
 
 ```swift
 import PackageDescription
@@ -169,7 +169,7 @@ or an exact commit:
 
 In the example above where we add a remote dependency to another framework, we specify a version of `1.3.0`. Using [Semantic Versioning]( https://semver.org ), SPM will automatically resolve the most recent version between 1.3.0 and 2.0.0 (the next major version number).
 
-You may however want to lock into a specific version, perhaps due to a regression introduced in a later version. In cases like this you can specify the `.exact` version of the package:
+You may however want to lock into a specific version, perhaps due to a regression introduced in a later version. In cases like this, you can specify the `.exact` version of the package:
 
 ```swift
 .package (url: "https://github.com/krzyzanowskim/CryptoSwift.git", .exact "1.3.0")
@@ -187,21 +187,21 @@ The initial build might take a few minutes to complete depending on the number o
 
 ## Working in Xcode
 
-Up until this point, we have only been working in terminal to create and build our package. For very basic libraries we could perhaps manage using just an editor like vim or vscode but we’d still lack the more advanced functionally that Xcode offers, for example code completion and debugging support. 
+Up until this point, we have only been working in terminal to create and build our package. For very basic libraries we could perhaps manage using just an editor like vim or vscode but we’d still lack the more advanced functionally that Xcode offers, for example, code completion and debugging support. 
 
-Fortunetly we can also build and debug our library using Xcode. In order to do so we need to generate an Xcode project:
+Fortunately, we can also build and debug our library using Xcode. To do so we need to generate an Xcode project:
 
 `swift package generate-xcodeproj`
 
 This will generate a new `.xcodeproj` file that we open with Xcode just like and other project with full code completion and debugging support. 
 
-**TIP: Remember to regenerate your Xcode project everytime you add or edit your dependencies.**
+**TIP: Remember to regenerate your Xcode project every time you add or edit your dependencies.**
 
-It also important to note that your `Package.swift` remains the source of truth *not* the Xcode project file.
+It is also important to note that your `Package.swift` remains the source of truth *not* the Xcode project file.
 
 ## Advantages 
 
-One of the main advantages of using SPM over CocoaPods or Carthage for example, is the built-in support Xcode provides. Yes that’s right, as from Xcode 11 SPM is now a first class citizen with full support for creating and managing dependencies.
+One of the main advantages of using SPM over CocoaPods or Carthage for example is the built-in support Xcode provides. Yes, that’s right, as from Xcode 11 SPM is now a first-class citizen with full support for creating and managing dependencies.
 
 Another advantage is that you don’t have to install any additional tools or deal with compatibility issues between different versions of Xcode. SPM is supported out of the box meaning that we have one less tool to install and keep up-to-date.
 
