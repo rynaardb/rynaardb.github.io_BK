@@ -15,13 +15,13 @@ To start playing around with SwiftUI you will need to have Xcode 11 installed al
 
 ## The Basics
 
-Views are defined declaratively, in other words, you tell SwiftUI what your UI should look like without having to worry about the "how it's done". Prior to SwiftUI's introduction we were using UIKit's imperative paradigm, the complete opposite of declarative where you need to tell the framework both what and how it should be done. 
+Views are defined declaratively, in other words, you tell SwiftUI what your UI should look like without having to worry about the "how it's done". Before SwiftUI's introduction we were using UIKit's imperative paradigm, the complete opposite of declarative where you need to tell the framework both what and how it should be done. 
 
-Views are typically composed of a number of small **single-purpose** views which are extremely light-weight. What is also really great about SwiftUI is that there is little to no performance overhead having all these single-purpose views as the framework takes care of performance optimization etc.
+Views are typically composed of several small **single-purpose** views that are extremely light-weight. What is also really great about SwiftUI is that there is little to no performance overhead having all these single-purpose views as the framework takes care of performance optimization etc.
 
 ## Creating Views
 
-A view is nothing more than a struct conforming to the `View` protocol. The contents of your view goes inside the `body` property:
+A view is nothing more than a struct conforming to the `View` protocol. The contents of your view go inside the `body` property:
 
 ```swift
 struct AlbumView: View {
