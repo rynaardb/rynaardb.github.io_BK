@@ -7,11 +7,11 @@ classes: wide
 tags: apple ipad ipad-development ipad-remote-development development remote swift ipad-vm terraform terraform-ipad digital-ocean digital-ocean-ipad swift-development swift-development-ipad xode-ipad  mosh mosh-ipad
 ---
 
-Since the release of iPadOS 13 the iPad has gained a lot of useful features making it so much more of a viable option for getting real work done. That being said, it still lacks in a number of areas, especially in the area of Swift development.
+Since the release of iPadOS 13, the iPad has gained a lot of useful features making it so much more of a viable option for getting real work done. That being said, it still lacks in several areas, especially in the area of Swift development.
 
-Sure, Apple does have it's own Swift Playground app, but as the name suggests, it is nothing more that a playground to learn and for prototyping concepts. Although Xcode on the iPad will be a dream come true for many of us, I don’t see that happening anytime soon. 
+Sure, Apple does have its own Swift Playground app, but as the name suggests, it is nothing more than a playground to learn and for prototyping concepts. Although Xcode on the iPad will be a dream come true for many of us, I don’t see that happening anytime soon. 
 
-In this post we’ll take a look at how to set up a remote machine for Swift development on the iPad with Terraform and Digital Ocean.
+In this post, we’ll take a look at how to set up a remote machine for Swift development on the iPad with Terraform and Digital Ocean.
 
 ## Prerequisites
 
@@ -42,15 +42,15 @@ On macOS this can easily be done by running the following command:
 
 `ssh-keygen -o`
 
-This will generate a new public and private key pair and our **public key** is what we will need to add on Digital Ocean. Copy the contents of `~/.ssh/id_rsa.pub` or alternatively copy it to the clipboard with: `pbcopy < ~/.ssh/id_rsa.pub`.
+This will generate a new public and private key pair and our **public key** is what we will need to add on Digital Ocean. Copy the contents of `~/.ssh/id_rsa.pub` or copy it to the clipboard with: `pbcopy < ~/.ssh/id_rsa.pub`.
 
-Next we need to add our public key on Digital Ocean under the Account > Security > SSH keys section. Click on the “Add SSH Key” button and paste in your public key. 
+Next, we need to add our public key on Digital Ocean under the Account > Security > SSH keys section. Click on the “Add SSH Key” button and paste in your public key. 
 
 Now would also be a good time to take note of the Fingerprint generated for your SSH key which you’ll need later. 
 
 ### On your iPad
 
-On the iPad there are a number of different apps that you can use to generate a new SSH key pair including [Prompt](https://panic.com/prompt/), [Termius](https://termius.com), [Working Copy](https://workingcopyapp.com) and [Blink shell](https://www.blink.sh) (my personal favourite).
+On the iPad, there are a number of different apps that you can use to generate a new SSH key pair including [Prompt](https://panic.com/prompt/), [Termius](https://termius.com), [Working Copy](https://workingcopyapp.com) and [Blink shell](https://www.blink.sh) (my personal favorite).
 
 Using Blink shell you can either generate a new SSH key pair by simply typing `ssh-keygen` from the prompt or by going to Settings > Keys and adding it there. Tap on the keys you just added and select “Copy Public Key”.
 
@@ -60,7 +60,7 @@ Repeat the steps for adding the public key for your Mac on Digital Ocean and rem
 
 In case you are not yet familiar with [Terraform](https://www.terraform.io), Terraform uses Infrastructure as Code to provision and manage cloud infrastructure and services. It automates rather tedious tasks when creating and setting up cloud infrastructure. 
 
-Of course we can also set up everything manually by hand but using Terraform to automate the entire process offers a lot of benefits as you will see in a minute.
+Of course, we can also set up everything manually by hand but using Terraform to automate the entire process offers a lot of benefits as you will see in a minute.
 
 ### Installing Terraform
 
@@ -125,21 +125,21 @@ Let’s break down each section of the terraform script above:
 
 ### Variable declaration
 
-We declare variables at the beginning of the file that we will reference later throughout the script. Here we create variables for our Digital Ocean Personal Access Token, public key, private key and SSH fingerprints.
+We declare variables at the beginning of the file that we will reference later throughout the script. Here we create variables for our Digital Ocean Personal Access Token, public key, private key, and SSH fingerprints.
 
 ### Provider setup
 
-The provider section tells Terraform that we’re going to use Digital Ocean as our provider. Terraform  also supports other providers like AWS, Azure, Linode and [many more](https://www.terraform.io/docs/providers/index.html). Here we create a very small VPS (droplet) with 1 CPU, 1GB of RAM, 25GB of SSD storage as defined by `size = "s-1vcpu-1gb"`. Remember to also set your region accordingly, in the example it is set to Frankfort, Germany `region = "fra1"`.
+The provider section tells Terraform that we’re going to use Digital Ocean as our provider. Terraform also supports other providers like AWS, Azure, Linode, and [many more](https://www.terraform.io/docs/providers/index.html). Here we create a very small VPS (droplet) with 1 CPU, 1GB of RAM, 25GB of SSD storage as defined by `size = "s-1vcpu-1gb"`. Remember to also set your region accordingly, in the example it is set to Frankfort, Germany `region = "fra1"`.
 
 ### Connection setup
 
-In the connection section we define how Terraform will access our newly created machine when running the provision script over SSH.
+In the connection section, we define how Terraform will access our newly created machine when running the provision script over SSH.
 
 ### Provisioning
 
-Once we have own newly created machine up and running we can start automating the process of installing the necessary tools and packages by running the provisioning script.
+Once we have our newly created machine up and running we can start automating the process of installing the necessary tools and packages by running the provisioning script.
 
-Create a new bash script file called `provision.sh` in the same directly as `dev-machine.tf`:
+Create a new bash script file called `provision.sh` in the same directory as `dev-machine.tf`:
 
 ```bash
 #!/bin/bash
@@ -184,7 +184,7 @@ First things first, we do a simple `apt update` and `apt upgrade` to get our sys
 
 ### Installing dependencies
 
-Next we install all the dependencies needed for the tools and packages that we’re going to install.
+Next, we install all the dependencies needed for the tools and packages that we’re going to install.
 
 ### Installing tools
 
@@ -198,11 +198,11 @@ Now that we have all the required packages and tools installed we can finally pr
 
 This part of the script is entirely up to you and of course optional. I do however suggest that you install them and familiarise yourself with them, especially [Tmux](https://github.com/tmux/tmux/wiki) which will make your development experience on the iPad so much more enjoyable. 
 
-Since we won’t be able to run an IDE, the next best option would be to customise and improve the experience while working in a shell environment. To achieve this I also recommend installing the [ZSH](https://www.zsh.org) shell together with [OHMyZSH](https://ohmyz.sh).
+Since we won’t be able to run an IDE, the next best option would be to customize and improve the experience while working in a shell environment. To achieve this I also recommend installing the [ZSH](https://www.zsh.org) shell together with [OHMyZSH](https://ohmyz.sh).
 
 ### Firewall rules
 
-Finally, we need to open the inbound and outbound UDP ports on port `60000` and `61000` which is needed by Mosh. [Mosh](https://mosh.org) is a remote terminal application that allows roaming, supports intermittent connectivity, and provides intelligent local echo and line editing of user keystrokes. It is a great alternative to SSH while working on the iPad when a stable connection is not always guaranteed.
+Finally, we need to open the inbound and outbound UDP ports on port `60000` and `61000` which is needed by Mosh. [Mosh](https://mosh.org) is a remote terminal application that allows roaming, supports intermittent connectivity and provides intelligent local echo and line editing of user keystrokes. It is a great alternative to SSH while working on the iPad when a stable connection is not always guaranteed.
 
 ## Creating the infrastructure
 
@@ -216,7 +216,7 @@ Next we need to initialise our Terraform script:
 
 `terraform init`
 
-Before you actually go ahead and run the Terraform script, it is always a good idea to first run `terraform plan`. This will print out a diff of what Terraform is about to do without actually doing it, giving you the opportunity to make sure everything is correctly configured.
+Before you go ahead and run the Terraform script, it is always a good idea to first run `terraform plan`. This will print out a diff of what Terraform is about to do without actually doing it, allowing you to make sure everything is correctly configured.
 
 Finally, and where all the magic happens, we can apply our changes by running:
 
@@ -231,8 +231,8 @@ terraform apply \
 
 ## Wrapping up
 
-That's it, once completed, Terraform will create the infrastructure, install all the tools and correctly configure everything for us to connect to our remote development machine.
+That's it, once completed, Terraform will create the infrastructure, install all the tools, and correctly configure everything for us to connect to our remote development machine.
 
-On Digital Ocean you should now see your newly created Droplet with a public accessible IP address and hostname.
+On Digital Ocean you should now see your newly created Droplet with a publicly accessible IP address and hostname.
 
 You can now go ahead and connect from your iPad using either SSH or Mosh. Simply add a new host using either the public IP address or hostname and connect via SSH or Mosh. Using Blink shell you can connect with Mosh running `mosh your-server-name`.
