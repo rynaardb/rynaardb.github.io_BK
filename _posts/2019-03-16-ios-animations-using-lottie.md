@@ -7,9 +7,9 @@ classes: wide
 tags: ios swift lottie animations bodymovin adobe-after-effects
 ---
 
-[Lottie](https://github.com/airbnb/lottie-ios) is a mobile library for Android and iOS that parses Adobe After Effects animations exported as JSON with [bodymovin](https://github.com/bodymovin/bodymovin) and renders the vector animations natively on mobile and through React Native!
+[Lottie](https://github.com/airbnb/lottie-ios) is a mobile library for iOS and Android that parses Adobe After Effects animations exported as JSON with [bodymovin](https://github.com/bodymovin/bodymovin) and renders the vector animations natively on mobile and through React Native!
 
-Animations, especially complex animations can take a long time to implement by hand when using Core Animation or even just simple UIView animations. Using Lottie can save you a lot of time and manual effort. Using Lottie is really easy, so let's get started!
+Animations, especially complex animations can take a long time to implement by hand when using Core Animation or even just simple UIView animations. Using Lottie can save you a lot of time and manual effort. Using Lottie is easy, so let's get started!
 
 ## Setting up Lottie
 
@@ -32,13 +32,13 @@ CocoaPods will generate a new Xcode workspace adding both your existing project 
 
 ## Working with LOTAnimationView
 
-Animations in Lottie is exported to JSON from Adobe After Effect and can be loaded from your app's bundle or from a URL. In the example below we are loading a file from the bundle called "loading.json":
+Animations in Lottie is exported to JSON from Adobe After Effect and can be loaded from your app's bundle or a URL. In the example below we are loading a file from the bundle called "loading.json":
 
 ```swift
 let loadingAnimation = LOTAnimationView(name: "loading")
 ```
 
-With Lottie animations you have full control over when to start, stop or whether you'd like to play the animation in a loop. In it's simplest form you can play the animation once:
+With Lottie animations, you have full control over when to start, stop, or whether you'd like to play the animation in a loop. In it's simplest form you can play the animation once:
 
 ```swift
 @objc private func animateOnce() {
@@ -47,7 +47,8 @@ With Lottie animations you have full control over when to start, stop or whether
     }
   }
 ```
-In some cases you might want to do a little bit more than just playing the animation once and this is where Lottie really shines, giving you full control over the animation. You can easily loop, start, stop or just play a portion of the animation:
+
+In some cases, you might want to do a little bit more than just playing the animation once and this is where Lottie shines, giving you full control over the animation. You can easily loop, start, stop, or just play a portion of the animation:
 
 ```swift
 @objc private func loopAnimation() {
@@ -68,4 +69,4 @@ The example Xcode project can be found on my GitHub [repository](https://github.
 
 ## Lottie Files
 
-For inspiration check out all the animations shared by very talented motion designers on [LottieFiles](https://lottiefiles.com), in fact, the [animation](https://lottiefiles.com/4693-loading) used in my example was sourced from LottieFiles.
+For inspiration check out all the animations shared by very talented motion designers on [LottieFiles](https://lottiefiles.com) the [animation](https://lottiefiles.com/4693-loading) used in my example was also sourced from LottieFiles.
