@@ -7,7 +7,7 @@ classes: wide
 tags: vapor server-side swift
 ---
 
-Getting started with [Vapor](https://vapor.codes) is really easy thanks to the handy Vapor Toolbox and well written [documentation](https://docs.vapor.codes/3.0/).
+Getting started with [Vapor](https://vapor.codes) is easy thanks to the handy Vapor Toolbox and well written [documentation](https://docs.vapor.codes/3.0/).
 
 ## Prerequisites
 
@@ -68,6 +68,7 @@ Since Vapor leans on Swift Package Manager you don't need Xcode to get started w
 ```bash
 vapor xcode
 ```
+
 This will generate an Xcode project for you allowing you to run and debug your application just like you would do for any other Xcode project.
 
-That's it! You are now ready to write Server-Side applications using Swift!
+That's it! You are now ready to write Server-Side applications using Swift.
