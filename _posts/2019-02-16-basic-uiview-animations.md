@@ -7,11 +7,11 @@ classes: wide
 tags: ios swift
 ---
 
-Subtle and concise animations can help draw the user’s attention to a specific area of your application. Often times it may be unclear to the user when to perform a certain action or as to what is going on after a specific task / action was completed. This is where well thought out animations can be very useful.
+Subtle and concise animations can help draw the user’s attention to a specific area of your application. Often it may be unclear to the user when to perform a certain action or as to what is going on after a specific task / action was completed. This is where well thought out animations can be very useful.
 
 ## UIView.animate
 
-There are a number of different APIs you can use to create animations but the most common and also very easy to use API is [UIView.animate](https://developer.apple.com/documentation/uikit/uiview/1622418-animate).
+There are several different APIs you can use to create animations but the most common and also very easy to use API is [UIView.animate](https://developer.apple.com/documentation/uikit/uiview/1622418-animate).
 
 Animating properties on a view can be done by calling UIView.animate where you need to specify the TimeInterval (duration) the animation will take to complete. Below simply animates the alpha channel of the view from 1 (visible) to 0 (completely transparent):
 
