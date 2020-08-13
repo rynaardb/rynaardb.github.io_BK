@@ -9,11 +9,11 @@ tags: vapor server-side swift microservices
 
 Microservices have recently got a lot of attention and Vapor provides us with all the needed tools and APIs to create a Microservices architecture relatively easy.
 
-Vapor has a number of packages providing support for the following:
+Vapor has several packages providing support for the following:
 
 * HTTP
 * Redis
-* SQL, MySQL and PostgreSQL
+* SQL, MySQL, and PostgreSQL
 * WebSocket
 * Auth
 * JWT
@@ -28,7 +28,7 @@ A definition of Microservices from [Wikipedia](https://en.wikipedia.org/wiki/Mic
 
 The topic around monolith vs microservice architecture has already been debated in the software design and architecture community and is beyond the scope of this post. 
 
-Microservices offers a number of benefits some of which includes:
+Microservices offers several benefits some of which includes:
 
 * Clear separation of concerns
 * Each service can be deployed independently
@@ -44,7 +44,7 @@ As illustrated below, the API Gateway is the external interface and entry point 
 
 ![image](/assets/images/microservices-api-gateway.png)
 
-It is the API Gateway's responsibility to check and route each request to the corresponding internal services. The API Gateway might have other responsibilities such as authentication, access control, monitoring, logging, caching, load balancing, request shaping etc.
+It is the API Gateway's responsibility to check and route each request to the corresponding internal services. The API Gateway might have other responsibilities such as authentication, access control, monitoring, logging, caching, load balancing, request shaping, etc.
 
 ## Implementing a Basic API Gateway in Vapor
 
@@ -56,7 +56,7 @@ func boot(router: Router) throws {
 }
 ```
 
-A quick and simple solution is to check the URL of the request for a prefix, in this case checking whether the request contains a the `/users` prefix:
+A quick and simple solution is to check the URL of the request for a prefix, in this case checking whether the request contains the `/users` prefix:
 
 ```swift
 func handle(_ req: Request) throws -> Future<Response> {
@@ -67,6 +67,7 @@ func handle(_ req: Request) throws -> Future<Response> {
     throw Abort(.badRequest)
 }
 ```
+
 The request is then handled by creating a new HTTP client pointing to correct `host` and endpoint:
 
 ```swift
@@ -83,13 +84,13 @@ func handle(_ req: Request, host: String) throws -> Future<Response> {
 
 ## Implementing a Microservice in Vapor
 
-Each service in the Microservices architecture would expose their own REST API that's consumed by other services or by the application's clients. Some services might also implement a Web UI. At runtime, each service is often containerised using Docker and have their own database, configurations etc.
+Each service in the Microservices architecture would expose their REST API that's consumed by other services or by the application's clients. Some services might also implement a Web UI. At runtime, each service is often containerized using Docker and have its database, configurations, etc.
 
-The following diagram illustrates how each of the microservices communicate with each other:
+The following diagram illustrates how each of the microservices communicates with each other:
 
 ![image](/assets/images/microservices-service-communication.png)
 
-Each functional area of the application is implemented by its own microservice exposing a REST API consumed by other services. For example, the user service invokes the order service in order to retrieve order information for the given user.
+Each functional area of the application is implemented by its microservice exposing a REST API consumed by other services. For example, the user service invokes the order service to retrieve order information for the given user.
 
 Services might also use asynchronous, message-based communication for inter-service communication using for example the [AMQP Protocol](https://www.amqp.org).
 
@@ -136,7 +137,8 @@ private extension UserController {
     }
 }
 ```
-As with every other architecture out there, there is no silver bullet and microservices is no exception. The Microservices architectures has many drawbacks ranging from added deployment complexity to testing which should be taken into consideration during the planning phases of your project. With that said it is still a great choice for complex, evolving applications despite drawbacks and implementation challenges.
+
+As with every other architecture out there, there is no silver bullet and microservices are no exception. The Microservices architectures have many drawbacks ranging from added deployment complexity to testing which should be taken into consideration during the planning phases of your project. With that said it is still a great choice for complex, evolving applications despite drawbacks and implementation challenges.
 
 Here are links to my GitHub repositories containing the example code:
 
