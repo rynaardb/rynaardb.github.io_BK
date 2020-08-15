@@ -11,7 +11,7 @@ This is page is inspired by [uses.tech](https://uses.tech/) by [Wes Bos](https:/
 
 ![image](/assets/images/rynaardb_desk_setup.jpg)
 
-## Hardware
+## 💻 Hardware
 
 At home, I use a Macbook Pro with a docking setup. This works well for me because it offers me the option to be mobile when I'm traveling and a desktop experience when working from home.
 
@@ -29,7 +29,7 @@ At home, I use a Macbook Pro with a docking setup. This works well for me becaus
 * [Elgato Stream Deck](https://www.elgato.com/en/gaming/stream-deck) - I use this to automate my workflow.
 * [Blue Yeti X Microphone](https://www.bluemic.com/en-us/products/yeti-x/) - Mainly for video calls, meetings, etc.
 
-## Software
+## 🧩 Software
 
 I use dark themes for pretty much everything, including all IDEs, apps, and macOS. The software I choose to use needs to either add value to my workflow or serve a specific purpose.
 
@@ -55,7 +55,7 @@ I use dark themes for pretty much everything, including all IDEs, apps, and macO
 * [Tweetbot](https://tapbots.com/tweetbot/mac/) - My twitter client of choice. I like being able to set up my timelines based on specific hashtags etc.
 * [Karabiner-Elements](https://karabiner-elements.pqrs.org/) - To remap some of the keys on my Keychron K6 keyboard.
 
-## Other Gear
+## 📱Other Gear
 
 * [iPad Pro 12.9 2018](https://www.gsmarena.com/apple_ipad_pro_12_9_(2018)-9387.php) - This thing is a beast and although it is not a laptop replacement for me, I have it set up for writing, coding and video editing.
 * [iPhone XS Max](https://www.gsmarena.com/apple_iphone_xs_max-9319.php) - Not just my phone but also use it as my main development device.
