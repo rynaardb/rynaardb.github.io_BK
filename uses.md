@@ -1,8 +1,7 @@
 ---
 layout: single
+title: "Uses"
 ---
-
-# Uses
 
 A list of hardware, software, and tools I use regularly, if not daily.
 
