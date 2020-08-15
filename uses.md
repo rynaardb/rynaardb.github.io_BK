@@ -2,6 +2,8 @@
 layout: single
 ---
 
+# Uses
+
 A list of hardware, software, and tools I use regularly, if not daily.
 
 I change up things sometimes, so this page will serve as a living document and a place to point curious developers to when I get asked.
