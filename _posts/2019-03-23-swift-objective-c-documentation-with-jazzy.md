@@ -80,7 +80,7 @@ public class UserApiClient {
 }
 ```
 
-> 💡 You can use the ⌥ (option) + ⌘ (command) + / while on the line of a class, struct, function, etc. to automatically add the documentation for you.
+> NOTE: You can also use the ⌥ (option) + ⌘ (command) + / keyboard shortcut while on the line of a class, struct, function, etc. to automatically add the code documentation for you.
 
 Swift and Objective-C documentation is written in markdown but also supports a number of special keywords, some of which includes:
 
