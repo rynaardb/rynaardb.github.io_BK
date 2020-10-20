@@ -33,7 +33,7 @@ At home, I use a Macbook Pro and a custom Hackintosh build.
 
 ### Peripherals and Accessories
 
-* [LG 38WK95C Ultrawide Curved Monitor](https://www.lg.com/us/monitors/lg-38WK95C-W-ultrawide-monitor) - Great monitor with good color accuracy. It's big enough to only need the one monitor on my desk.
+* [LG 38WK95C Ultrawide Curved Monitor](https://www.lg.com/us/monitors/lg-38WK95C-W-ultrawide-monitor) mounted on a [Ergotron LX Desk Monitor Arm](https://www.ergotron.com/en-us/products/product-details/45-241#?color=polished%20aluminum&buynow=0) - Great monitor with good color accuracy. It's big enough to only need the one monitor on my desk.
 * [Keychron K6 mechanical keyboard](https://www.keychron.com/products/keychron-k6-wireless-mechanical-keyboard?variant=31440990142553) (Gateron Brown switches) - I love this keyboard! The Gateron Brown switches have a great feel to it and also sounds nice.
 * [Samsung T5 External SSD](https://www.samsung.com/semiconductor/minisite/ssd/product/portable/t5/) - I have a few of these which I use to store my data and backups.
 * [Elgato Stream Deck](https://www.elgato.com/en/gaming/stream-deck) - I use this to automate my workflow.
