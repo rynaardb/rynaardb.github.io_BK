@@ -253,7 +253,7 @@ To learn more about Binary Frameworks I highly suggest watching the [Binary Fram
 
 Swift also includes a neat little tool to compute a checksum for your binary:
 
-```termnial
+```bash
 swift package compute-checksum binary-example-1.0.0.xcframework.zip
 // outputs: a40d8b15ed737c5029bf3d99fa0c46a6
 ```
