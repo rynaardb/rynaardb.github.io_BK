@@ -150,7 +150,7 @@ Accessing package resources from code is equally straightforward and is mainly d
 let path = Bundle.module.path(forResource: "StaticData", ofType: "json")
 ```
 
-```objective-c
+```objectivec
 // Objective-C
 NSString *path = [SWIFTPM_MODULE_BUNDLE pathForResource:@"StaticData" ofType: @"json"];
 ```
@@ -162,7 +162,7 @@ NSString *path = [SWIFTPM_MODULE_BUNDLE pathForResource:@"StaticData" ofType: @"
 let image = UIImage(named: "Image", in: .module)
 ```
 
-```objective-c
+```objectivec
 // Objective-C
 UIImage *image = [UIImage imageNamed:@"Image" inBundle: SWIFTPM_MODULE_BUNDLE];
 ```
