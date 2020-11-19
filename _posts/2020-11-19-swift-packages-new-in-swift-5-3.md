@@ -143,35 +143,35 @@ For unbundled applications like command-line applications, resource bundles need
 
 Accessing package resources from code is equally straightforward and is mainly done using Foundation's Bundle API. Accessing resources is the same on all platforms that support Swift Packages and is independent of built artifacts.
 
-    **Accessing a file using the module bundle directly:**
+**Accessing a file using the module bundle directly:**
 
-    ```swift
-    // Swift
-    let path = Bundle.module.path(forResource: "StaticData", ofType: "json")
-    ```
+```swift
+// Swift
+let path = Bundle.module.path(forResource: "StaticData", ofType: "json")
+```
 
-    ```objective-c
-    // Objetive-C
-    NSString *path = [SWIFTPM_MODULE_BUNDLE pathForResource:@"StaticData" ofType: @"json"];
-    ```
+```objective-c
+// Objective-C
+NSString *path = [SWIFTPM_MODULE_BUNDLE pathForResource:@"StaticData" ofType: @"json"];
+```
 
-    **Passing the module bundle to APIs:**
+**Passing the module bundle to APIs:**
 
-    ```swift
-    // Swift
-    let image = UIImage(named: "Image", in: .module)
-    ```
+```swift
+// Swift
+let image = UIImage(named: "Image", in: .module)
+```
 
-    ```objective-c
-    // Objetive-C
-    UIImage *image = [UIImage imageNamed:@"Image" inBundle: SWIFTPM_MODULE_BUNDLE];
-    ```
+```objective-c
+// Objective-C
+UIImage *image = [UIImage imageNamed:@"Image" inBundle: SWIFTPM_MODULE_BUNDLE];
+```
 
-    **Best practices when accessing resources:**
+**Best practices when accessing resources:**
 
-    - Add each resource to the module that uses it
-    - If you need your resource to be visible from other modules, provide typed public accessors for individual resources
-    - Don't vend the whole resource bundle as an API to avoid external dependencies
+- Add each resource to the module that uses it
+- If you need your resource to be visible from other modules, provide typed public accessors for individual resources
+- Don't vend the whole resource bundle as an API to avoid external dependencies
 
 ## Localized Resources
 
