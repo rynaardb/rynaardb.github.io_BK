@@ -195,7 +195,7 @@ Fortunately, we can also build and debug our library using Xcode. To do so we ne
 
 This will generate a new `.xcodeproj` file that we open with Xcode just like and other project with full code completion and debugging support. 
 
-**TIP: Remember to regenerate your Xcode project every time you add or edit your dependencies.**
+> Remember to regenerate your Xcode project every time you add or edit your dependencies.**
 
 It is also important to note that your `Package.swift` remains the source of truth *not* the Xcode project file.
 
@@ -207,7 +207,9 @@ Another advantage is that you don’t have to install any additional tools or de
 
 ## Disadvantages
 
-SPM still being relatively new and while only recently saw major adoption still lacks a few key features. One of them being support for binary dependencies. [SE-0272]( https://github.com/apple/swift-evolution/blob/master/proposals/0272-swiftpm-binary-dependencies.md) is an open proposal which is currently in “Accepted with revisions” state and will hopefully be implemented in the next version of Swift.  
+SPM still being relatively new and while only recently saw major adoption still lacks a few key features. One of them being support for binary dependencies. [SE-0272]( https://github.com/apple/swift-evolution/blob/master/proposals/0272-swiftpm-binary-dependencies.md) is an open proposal which is currently in “Accepted with revisions” state and will hopefully be implemented in the next version of Swift.
+
+**UPDATE: Distributing Binary Frameworks are now supported in Swift 5.3**
 
 ## Resources
 
