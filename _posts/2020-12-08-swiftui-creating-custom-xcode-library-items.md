@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Creating custom Xcode library items"
+title: "SwiftUI - Creating custom Xcode library items"
 date: 2020-12-08
 classes: wide
 categories: posts
