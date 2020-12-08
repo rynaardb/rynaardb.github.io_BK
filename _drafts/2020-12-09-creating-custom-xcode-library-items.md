@@ -1,27 +1,23 @@
 ---
 layout: single
 title: "Creating custom Xcode library items"
-date: PUBLISH_DATE
+date: 2020-12-09T00:00:00.000Z
 classes: wide
 categories: posts
-tags: TAGS
+tags: apple ios xcode xcode12 swift swift5.3 swift-packages swiftui swiftui-views views custom-swiftui-view view modifiers xcode library items xcode-library xcode-library-items LibraryContentProvider LibraryContentBuilder LibraryItem
 ---
 
-# Xcode Library - Adding your own SwiftUI views and modifiers to your app or Swift Package
+The Xcode library is an great way to discover and learn about available SwiftUI views and modifiers and it allows you to easily drag and drop them to the Xcode Previews canvas without writing any code. 
 
-The Xcode library is an easy way to discover available SwiftUI views and allowing you to easily drag and drop them to the Xcode Previews canvas. New in Xcode 12 and Swift 5.3, is the ability to extend the Xcode Library with your own views and modifiers making it easier to discover and reuse views within your app or Swift Packages.
-
-Let's dive right in and see how we can extend the content of the Xcode Library with our own SwiftUI views and modifiers, making it easier to discover and reuse o
-
-With all the [new features](https://rynaardb.com/posts/2020/11/19/swift-packages-new-in-swift-5-3.html) introduced in both Xcode 12 and Swift 5.3, Swift Packages are really starting to feel like a first-class citizen when working with Xcode.
-
-Let's take a look at how we can create Swift Packages containing SwiftUI views and modifiers that can be accessed right in the Xcode Library, just like those provided by the standard SwiftUI library. This makes it use for consumers of your library to 
+New in Xcode 12 and Swift 5.3, is the ability to extend the Xcode Library with your own views and modifiers making it easier to discover and reuse views within your app or Swift Packages.
 
 ## Adding views
 
+Let's take a look at how we can extend the Xcode library with our own views that we can then add to the preview canvas, just like those provided by the standard SwiftUI library.
+
 ### Structuring your views
 
-Let's say we have a custom rounded button component that we'd like to reuse across a number of different views. We start by building out our custom view, just like any other SwiftUI view:
+Let's say we have a custom rounded button component that we'd like to reuse across a number of different views. We start by building out our custom view like any other SwiftUI view:
 
 ```swift
 struct RoundedButton: View {
@@ -43,9 +39,9 @@ struct RoundedButton: View {
     }
 }
 ```
-It is important to pay attention at the structure of your code to make it reusable in different contexts. From the example above, instead of hardcoding all the modifier values as you normally would, we declare properties and assign them to the modifiers. By doing so we can now configure and use our custom button with different configurations anywhere where we can use a view.
+It is important to pay attention at the structure of our code to make it reusable in different contexts. From the example above, instead of hardcoding all the modifier values as you normally would, we declare properties and assign them to the modifiers. By doing so we can now configure and use our custom button with different configurations throughout our UI.
 
-### Creating an Xcode LibraryItem
+### Creating an Xcode LibraryItem (for views)
 
 The first step is to create a type that conform to the `LibraryContentProvider` protocol:
 
@@ -59,7 +55,11 @@ The `LibraryContentProvider` protocol has two requirements:
 - `views` property - to extend the views Xcode library
 - `modifiers` function - to extend the modifiers Xcode library
 
-Both return an array of library items (`[LibraryItem]`) to extend the Xcode library. In this section we will focus on extending the views section of the Xcode library by creating a new `LibraryItem` and assigning it to the `views` array.
+Both returns an array of library items (`[LibraryItem]`) to extend the Xcode library. 
+
+> Xcode will automatically scan our source code for types conforming to the `LibraryContentProvider`protocol and add them to the library without having to build or run our code. 
+
+In this section we will focus on extending the views section of the Xcode library by creating a new `LibraryItem` and assigning it to the `views` array:
 
 ```swift
 @LibraryContentBuilder
@@ -76,19 +76,20 @@ Both return an array of library items (`[LibraryItem]`) to extend the Xcode libr
     }
 ```
 
-The first argument for the `LibraryItem` type is the view we want to add to the library, in this case our custom button `RoundedButton`. Here we pass in the sample data that will be used once the view is dragged onto the preview canvas. 
+The first argument when initializing the `LibraryItem`, is the **view** we want to add to the library, in this case our custom button `RoundedButton`. Here we pass in the default data that will be used once the view is added to the preview canvas. 
 
-> The default values you specify is really up to you and is meant to act as a starting point that can be customised based on the insertion context.
+The default values you specify is really up to you and is meant to act as a starting point that can be customised based on the insertion context.
+
+> `@LibraryContentBuilder`is a new function builder for generating arrays of`LibraryItem`instances without requiring full array literal syntax.
 
 And just like that, we have now extended the Xcode library with our custom rounded button view. 
 
-Click on the "+" icon in Xcode to open the library (⇧ + ⌘ + L) and make sure you have "Show the views library" selected. Our custom rounded button is now showing up together with all the other system provided views.
+Click on the "+" icon in Xcode to open the library (⇧ + ⌘ + L) and make sure you have "Show the views library" selected.
 
-TODO: Add screenshot
+![image](/assets/images/xcode-library-items-views.png)
+*Our custom rounded button is now showing up together with all the other system provided views.*
 
-Remember, views does not have to correspond to library items one-to-one, meaning that you can have multiple library items representing views in different configurations. 
-
-TODO: Show code for same view in different configuration??
+> Remember, views does not have to correspond to library items one-to-one, meaning that you can have multiple library items representing views in different configurations. 
  
 ## Adding view modifiers
 
@@ -96,7 +97,11 @@ Just like views, we can also extend the Xcode library with custom view modifiers
 
 ### Extensions vs. View Modifiers
 
-With extensions we can encapsulate common layout and styling logic that can be reused across many views, however they do have limitations. With view modifiers we can leverage @State and other View-related behavior and apply this behavior to arbitrary views.
+With extensions we can encapsulate common layout and styling logic that can be reused across many views, however they do have limitations. 
+
+With view modifiers however, we can leverage @State and other View-related behavior and apply this behavior to arbitrary views.
+
+Let's create an extension on `View` for a specific style variation of our custom rounded button:
 
 ```swift
 extension View {
@@ -110,22 +115,31 @@ extension View {
 }
 ```
 
-### Creating an Xcode LibraryItem
+### Creating an Xcode LibraryItem (for view modifiers)
 
-To add our custom view modifier to the Xcode library, we yet again need to create a new `LibraryItem` and return it as an array in the `modifiers` function of the `LibraryContentProvider` protocol.
+To add our custom view modifier to the Xcode library, we yet again need to create a new `LibraryItem` and return it as an array in the `modifiers` function of the `LibraryContentProvider` protocol:
 
 ```swift
 @LibraryContentBuilder
- public func modifiers(base: AnyView) -> [LibraryItem] {
- 	LibraryItem(base.rotated3DButtonStyle(shadowColor: .blue))
- }
+    public func modifiers(base: AnyView) -> [LibraryItem] {
+        LibraryItem(base.rotated3DButtonStyle(shadowColor: .blue))
+    }
 ```
 
-Similar to the views property, except it requires a base argument. The base enables Xcode the figure out which part is the modifier and which part is the view it modifies.
+Here the first argument when initializing the LibraryItem, is our base. The base enables Xcode to figure out which part is the **modifier** and which part is the **view it modifies**.
 
-So if the modifier is applied to `Image`, the base will be `Image`
+So, if the modifier is applied to `Image`, the base will be `Image`. In our case, given the example above, we apply a modifier to `View`, so our base will be `AnyView`.
 
-TODO: Add screenshot of Xcode library showing custom modifier
+Again, just like that, we have now also extended the Xcode library with our custom view modifier. 
+
+Click on the "+" icon in Xcode to open the library (⇧ + ⌘ + L). This time around make sure you have "Show the Modifiers library" selected.
+
+![image](/assets/images/xcode-library-items-view-modifiers.png)
+*Our custom view modifier is now showing up together with all the other system provided view modifiers.*
+
+## What about Swift Packages?
+
+Since Xcode automatically scans all your source code files for `LibraryContentProvider` code, including all dependencies you might have, it also work really well with Swift Packages.
 
 ##  Additional Info
 
@@ -133,11 +147,5 @@ TODO: Add screenshot of Xcode library showing custom modifier
 - So even if your code does not build, you can still contribute to the library and continue building your UI
 - No additional build configurations required to enable this feature
 - LibraryContentProvider code is never executed and Xcode will automatically strip it when building for distribution. 
-
-## What about Swift Packages?
-
-Since Xcode scans all your source code files for LibraryContentProvider code, including dependencies all dependencies you might have, it work really well with Swift Packages.
-
-Yes it works, just make sure your the visibility of your struct is public.
 
 ##  Summary
