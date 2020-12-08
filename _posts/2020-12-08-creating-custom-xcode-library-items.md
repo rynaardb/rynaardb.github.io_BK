@@ -57,7 +57,7 @@ The `LibraryContentProvider` protocol has two requirements:
 
 Both return an array of library items (`[LibraryItem]`) to extend the Xcode library. 
 
-> Xcode will automatically scan our source code for types conforming to the `LibraryContentProvider`protocol and add them to the library without having to build or run our code. 
+> Xcode will automatically scan our source code for types conforming to the `LibraryContentProvider` protocol and add them to the library without having to build or run our code. 
 
 In this section, we will focus on extending the views section of the Xcode library by creating a new `LibraryItem` and assigning it to the `views` array:
 
@@ -80,7 +80,7 @@ The first argument when initializing the `LibraryItem`, is the **view** we want 
 
 The default values you specify is really up to you and serves to act as a starting point that can be customized based on the insertion context.
 
-> `@LibraryContentBuilder`is a new function builder for generating arrays of`LibraryItem`instances without requiring full array literal syntax.
+> `@LibraryContentBuilder` is a new function builder for generating arrays of `LibraryItem` instances without requiring full array literal syntax.
 
 And just like that, we have now extended the Xcode library with our custom rounded button view. 
 
