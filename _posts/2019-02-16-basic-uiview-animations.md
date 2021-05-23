@@ -2,8 +2,11 @@
 layout: single
 title: "Basic UIView Animations"
 date: 2019-02-16
-categories: posts
+header:
+    image: /assets/images/uiview-animations.png
+    teaser: /assets/images/uiview-animations.png
 classes: wide
+categories: posts
 tags: ios swift
 ---
 

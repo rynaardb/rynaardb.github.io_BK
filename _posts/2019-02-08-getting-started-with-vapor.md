@@ -2,8 +2,11 @@
 layout: single
 title: "Getting started with Vapor"
 date: 2019-02-08
-categories: posts
+header:
+    image: /assets/images/vapor-swift.png
+    teaser: /assets/images/vapor-swift.png
 classes: wide
+categories: posts
 tags: vapor server-side swift
 ---
 

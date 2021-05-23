@@ -2,8 +2,11 @@
 layout: single
 title: "Swift and Objective-C documentation with Jazzy"
 date: 2019-03-23
-categories: posts
+header:
+    image: /assets/images/jazzy-documentation.png
+    teaser: /assets/images/jazzy-documentation.png
 classes: wide
+categories: posts
 tags: ios swift objective-c jazzy documentation xcode code clang sourcekit ast
 ---
 

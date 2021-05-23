@@ -2,8 +2,11 @@
 layout: single
 title: "iOS animations using Lottie"
 date: 2019-03-16
-categories: posts
+header:
+    image: /assets/images/ios-animations-with-lottie.png
+    teaser: /assets/images/ios-animations-with-lottie.png
 classes: wide
+categories: posts
 tags: ios swift lottie animations bodymovin adobe-after-effects
 ---
 

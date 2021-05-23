@@ -2,7 +2,9 @@
 layout: single
 title: "SwiftUI - Creating custom Xcode library items"
 date: 2020-12-08
-image: /assets/images/swiftui.png
+header:
+    image: /assets/images/swiftui-custom-xcode-library-items.png
+    teaser: /assets/images/swiftui-custom-xcode-library-items.png
 classes: wide
 categories: posts
 tags: apple ios xcode xcode12 swift swift5.3 swift-packages swiftui swiftui-views views custom-swiftui-view view modifiers xcode library items xcode-library xcode-library-items LibraryContentProvider LibraryContentBuilder LibraryItem

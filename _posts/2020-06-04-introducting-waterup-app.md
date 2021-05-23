@@ -2,6 +2,10 @@
 layout: single
 title: "Introducing WaterUP - A standalone watchOS water tracking app developed using SwiftUI"
 date: 2020-06-04
+header:
+    image: /assets/images/waterup-app.png
+    teaser: /assets/images/waterup-app.png
+classes: wide
 categories: posts
 gallery:
   - image_path: /assets/images/waterup-screenshot2.png

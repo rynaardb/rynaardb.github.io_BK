@@ -2,8 +2,11 @@
 layout: single
 title: "Swift Development on the iPad using Terraform and Digital Ocean"
 date: 2020-02-11
-categories: posts
+header:
+    image: /assets/images/ipad-development-terraform-digital-ocean.png
+    teaser: /assets/images/ipad-development-terraform-digital-ocean.png
 classes: wide
+categories: posts
 tags: apple ipad ipad-development ipad-remote-development development remote swift ipad-vm terraform terraform-ipad digital-ocean digital-ocean-ipad swift-development swift-development-ipad xode-ipad  mosh mosh-ipad
 ---
 

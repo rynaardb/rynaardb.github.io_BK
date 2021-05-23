@@ -6,3 +6,5 @@ gem "jekyll-include-cache"
 
 gem 'jekyll-paginate'
 
+gem "jekyll-theme-yat"
+

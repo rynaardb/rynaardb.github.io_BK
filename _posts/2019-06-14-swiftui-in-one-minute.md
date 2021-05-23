@@ -2,8 +2,11 @@
 layout: single
 title: "SwiftUI in one minute"
 date: 2019-06-14
-categories: posts
+header:
+    image: /assets/images/swiftui.png
+    teaser: /assets/images/swiftui.png
 classes: wide
+categories: posts
 tags: swift swiftui ios declarative programming wwdc2019 wwdc19 xcode11 combine previews
 ---
 

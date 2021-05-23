@@ -2,8 +2,11 @@
 layout: single
 title: "Swift Package Manager - Creating Packages"
 date: 2020-01-08
-categories: posts
+header:
+    image: /assets/images/creating-swift-packages.png
+    teaser: /assets/images/creating-swift-packages.png
 classes: wide
+categories: posts
 tags: swift package manager swift-package-manager spm swift-packages swift-server-side swift-dependencies ios programming xcode11
 ---
 

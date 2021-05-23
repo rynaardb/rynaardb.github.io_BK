@@ -2,6 +2,9 @@
 layout: single
 title: "Swift Packages - New in Swift 5.3"
 date: 2020-11-19
+header:
+    image: /assets/images/swift-packages.png
+    teaser: /assets/images/swift-packages.png
 classes: wide
 categories: posts
 tags: swift package manager pckages swift-package-manager spm swift-packages swift-server-side swift-dependencies ios programming xcode12 swift

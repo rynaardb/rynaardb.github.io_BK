@@ -2,8 +2,11 @@
 layout: single
 title: "Functional Programming in Swift"
 date: 2019-04-02
-categories: posts
+header:
+    image: /assets/images/functional-programming-swift.png
+    teaser: /assets/images/functional-programming-swift.png
 classes: wide
+categories: posts
 tags: swift functional programming swiftlang ios functions
 ---
 

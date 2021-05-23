@@ -2,8 +2,11 @@
 layout: single
 title: "Microservices with Vapor"
 date: 2019-02-23
-categories: posts
+header:
+    image: /assets/images/microservices-with-vapor.png
+    teaser: /assets/images/microservices-with-vapor.png
 classes: wide
+categories: posts
 tags: vapor server-side swift microservices
 ---
 

@@ -2,6 +2,10 @@
 layout: single
 title: "Resolving ITMS-90683 for standalone watchOS apps"
 date: 2020-06-10
+header:
+    image: /assets/images/resolving-itms-90683.png
+    teaser: /assets/images/resolving-itms-90683.png
+classes: wide
 categories: posts
 tags: apple swiftui swift-development development swift watchos watchos-development watch-development apple-watch swiftui-app healthkit standalone watchos app testflight watchkit ITMS-90683
 ---
