@@ -16,11 +16,11 @@ Today's approach to software development requires software to be delivered **fre
 
 **Continuous Delivery (CD)** is the practice of releasing software in short cycles, with greater speed and frequency. New code is released in smaller batches, even a few times a day. This makes it more bug-resistant and easier to manage.
 
-GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub.
+[GitHub Actions](https://github.com/features/actions) makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub.
 
 ## GitHub Actions key features
 
-GitHub actions offer some really nice features making it a viable option for projects of any size. Best of all, it is free (with limits), even on the free plan. 
+GitHub Actions offer some really nice features making it a viable option for projects of any size. Best of all, it is free (with limits), even on the free plan. 
 
 Below are some of the key features offered by GitHub Actions: 
 
