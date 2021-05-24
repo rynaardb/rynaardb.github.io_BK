@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Uses"
+classes: wide
 ---
 
 A list of hardware, software, and tools I use regularly, if not daily.
