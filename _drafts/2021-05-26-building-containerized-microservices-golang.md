@@ -66,11 +66,9 @@ With all the boring stuff out of the way, it's time to get our hards dirty writi
 
 ### Project Structure
 
-We will be splitting up our microservice application into logical layers to
+To keep things neatly organized, we'll be splitting up our microservice application into logical layers
 
-### Models
-
-Entities (objects) in our application
+models Entities (objects) in our application
 
 ### Control
 
