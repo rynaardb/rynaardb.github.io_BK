@@ -69,6 +69,8 @@ Throughout this series we will focus on building a **single microservice** which
 
 With all the boring stuff out of the way, it's time to get our hands dirty writing some code. Let's get started with building our microservice in Go.
 
+If you wish to follow along, you can download the complete project from my GitHub [repo](https://github.com/rynaardb/go-inventory-microservice).
+
 ### Project Structure
 
 To keep things neatly organized, we'll be splitting up our project into logical layers:
@@ -81,7 +83,7 @@ To keep things neatly organized, we'll be splitting up our project into logical 
 
 **dao:** Data access objects acting as an abstraction layers for data persistence
 
-**database:** Manages all database operations
+**databases:** Manages all database connections and operations
 
 **models:** Entities (objects) in our application
 
