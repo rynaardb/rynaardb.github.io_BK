@@ -7,7 +7,7 @@ header:
     teaser: /assets/images/containerized-microservices-go.png
 classes: wide
 categories: posts
-tags: go golang go-gin gorm webservices microservices docker dockerfile container containerize devops kubernetes terraform aws
+tags: go golang go-gin gorm webservices microservices docker dockerfile container containerize devops kubernetes terraform aws deployment
 ---
 
 Today I'm kicking off part 1 of a 5-part series taking a closer look at how to build, test, and deploy scalable containerized microservices using [Go](https://golang.org). 
