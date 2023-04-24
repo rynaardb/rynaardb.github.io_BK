@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "10 Useful CLI tools for DevOps practitioners with practical examples"
+title: "10 Useful CLI tools for DevOps Practitioners with practical examples"
 date: 2023-04-24
 header:
     image: /assets/images/useful-cli-tools-for-devops-practitioners.png
