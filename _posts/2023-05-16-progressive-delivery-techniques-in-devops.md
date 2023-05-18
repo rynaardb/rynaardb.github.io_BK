@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Progressive Delivery Techniques in DevOops"
+title: "Progressive Delivery Techniques in DevOps"
 date: 2023-05-16
 header:
     image: /assets/images/progressive-delivery-techniques-in-devops.png
