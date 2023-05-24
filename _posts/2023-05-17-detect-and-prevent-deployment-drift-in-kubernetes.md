@@ -1,13 +1,13 @@
 ---
 layout: single
-title: "Detect and Prevent Deployment Drift in Kubernets"
+title: "Detect and Prevent Deployment Drift in Kubernetes"
 date: 2023-05-17
 header:
     image: /assets/images/detect-and-prevent-deployment-drift-in-kubernetes.png
     teaser: /assets/images/detect-and-prevent-deployment-drift-in-kubernetes.png
 classes: wide
 categories: posts
-tags: detect prevent deployment drift kubernetes terraform helm iac
+tags: detect prevent deployment drift kubernetes k8s terraform helm iac infrastructure-as-code
 ---
 
 Kubernetes has revolutionized the way we deploy and manage applications, offering scalability, reliability, and ease of management. However, as your application evolves and deployment configurations change, it's crucial to be mindful of deployment drift. Deployment drift occurs when the actual state of your deployed application diverges from its desired state, leading to potential instability, performance issues, and security vulnerabilities. In this blog post, we will explore the concept of deployment drift, its causes, and provide practical strategies to detect and prevent it in your Kubernetes deployments.
