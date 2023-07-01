@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "Functional Programming in Swift"
 date: 2019-04-02
-header:
-    image: /assets/images/functional-programming-swift.png
-    teaser: /assets/images/functional-programming-swift.png
-classes: wide
-categories: posts
-tags: swift functional programming swiftlang ios functions
+categories: swift
+tags: swift functional-programming
+image:
+    path: /assets/images/functional-programming-swift.png
 ---
 
 Functional programming is a programming paradigm and perhaps even more so a mindset which helps you structure your programs into separate functions. These functions take some input and return the computed output based on the given input. The most important aspects of functional programming are to prevent side effects and to avoid mutating global state.
@@ -129,7 +127,7 @@ for superhero in superheros {
 
 Swift provides several built-in higher-order functions but the most common are `filter`, `map`, and `reduce` which does all the heavy lifting for you.
 
-### `filter(_:)`
+### filter
 
 As the name suggests, filter will iterate over a collection and filter out only those items passed as a parameter in the closure, for example, filter out only dc superhero characters in the `superheros` array:
 
@@ -146,7 +144,7 @@ let superheros = [superman, batman, joker, ironman, captainamerica, thor]
 let dcSuperheros = superheros.filter { $0.world == .dc }
 ```
 
-### `map(_:)`
+### map
 
 Applies transformations to each item in the collection. Here we increase the `skillLevel` by `100` for each of the superhero characters:
 
@@ -154,7 +152,7 @@ Applies transformations to each item in the collection. Here we increase the `sk
 let improvedSuperHeros = superheros.map { $0.skillLevel + 100 }
 ```
 
-### `reduce(_:_:)`
+### reduce
 
 Reduces a collection into a single result, in the example below calculating `combinedSkillLevel` for all the superhero characters in our array:
 

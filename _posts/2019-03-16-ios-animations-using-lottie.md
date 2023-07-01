@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "iOS animations using Lottie"
 date: 2019-03-16
-header:
-    image: /assets/images/ios-animations-with-lottie.png
-    teaser: /assets/images/ios-animations-with-lottie.png
-classes: wide
-categories: posts
-tags: ios swift lottie animations bodymovin adobe-after-effects
+categories: ios
+tags: ios swift lottie animations
+image:
+    path: /assets/images/ios-animations-with-lottie.png
 ---
 
 [Lottie](https://github.com/airbnb/lottie-ios) is a mobile library for iOS and Android that parses Adobe After Effects animations exported as JSON with [bodymovin](https://github.com/bodymovin/bodymovin) and renders the vector animations natively on mobile and through React Native!
@@ -18,7 +16,7 @@ Animations, especially complex animations can take a long time to implement by h
 
 The easiest way to install and use Lottie is by using [CocoaPods](https://cocoapods.org), but there are [other options](https://github.com/airbnb/lottie-ios#installing-lottie) too. We start by creating a Podfile in the same directory as our Xcode project and add the lottie-ios pod:
 
-```bash
+```shell
 target 'LottieAnimations' do
   use_frameworks!
   pod 'lottie-ios'
@@ -27,7 +25,7 @@ end
 
 With the `lottie-ios` pod added we simply need to do install the pod:
 
-```bash
+```shell
 pod install
 ```
 
@@ -62,6 +60,7 @@ In some cases, you might want to do a little bit more than just playing the anim
                         withCompletion: nil)
 }
 ```
+
 ```swift
 @objc private func stopAnimation() {
   loadingAnimation.stop()

@@ -1,18 +1,17 @@
 ---
-layout: single
+layout: post
 title: "Terragrunt - Simplify and Scale Your Infrastructure with Ease"
 date: 2023-06-05
-header:
-    image: /assets/images/terragrunt.png
+categories: devops terraform
+tags: terragrunt terraform iac infrastructure-as-code dry dont-repeat-yourselve
+image:
+    path: /assets/images/terragrunt.png
     teaser: /assets/images/terragrunt.png
-classes: wide
-categories: posts
-tags: terragrunt terraform infrastruture automation iac infrastructure-as-code devops dry
 ---
 
 In the world of infrastructure as code (IaC), managing complex infrastructure efficiently and consistently can be a daunting task. However, with the advent of tools like [Terragrunt](https://terragrunt.gruntwork.io), this process has become significantly easier. Terragrunt, an open-source tool developed by Gruntwork, is designed to enhance and simplify the usage of [Terraform](https://www.terraform.io), an industry-leading IaC tool. In this blog post, we will explore the benefits of Terragrunt and provide examples of how it can streamline your infrastructure management workflow.
 
-# What is Terragrunt?
+## What is Terragrunt?
 
 Terragrunt is a thin wrapper tool that extends the functionality of Terraform, providing additional features and solving common challenges faced when working with Terraform code. It acts as a powerful orchestration layer, allowing for seamless configuration and deployment management of multiple Terraform modules, remote state storage, and cross-account deployments. Terragrunt simplifies the management of complex infrastructure environments and helps teams adhere to best practices.
 
@@ -44,7 +43,7 @@ Suppose you are working on a project that requires deploying a web application t
 
 To start, you would create a folder structure for your project:
 
-```perl
+```markdown
 my-project/
 ├── environments/
 │   ├── dev/
@@ -76,6 +75,7 @@ inputs = {
   db_name     = "dev-database"
 }
 ```
+{: file="dev/terragrunt.hcl" }
 
 Here, we define the source as `../modules`, indicating that the modules are located in the parent directory. We also specify environment-specific input variables, such as the environment name, VPC name, load balancer name, and database name.
 
@@ -90,6 +90,7 @@ include {
   path = "environments/*"
 }
 ```
+{: file="terragrunt.hcl" }
 
 In this example, we use the `include` block to specify a wildcard path pattern (`environments/*`) to include all environment-specific configurations. This allows Terragrunt to automatically apply the configurations for each environment when executed.
 

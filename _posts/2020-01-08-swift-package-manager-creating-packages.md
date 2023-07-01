@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "Swift Package Manager - Creating Packages"
 date: 2020-01-08
-header:
-    image: /assets/images/creating-swift-packages.png
-    teaser: /assets/images/creating-swift-packages.png
-classes: wide
-categories: posts
-tags: swift package manager swift-package-manager spm swift-packages swift-server-side swift-dependencies ios programming xcode11
+categories: swift
+tags: swift spm swift-package-manager packages
+image:
+    path: /assets/images/creating-swift-packages.png
 ---
 
 Swift Package Manager, or SPM, is a tool for managing the distribution of Swift code. It is also a great tool to manage your project dependencies, allowing you to import third-party frameworks or those you developed yourself.
@@ -25,30 +23,18 @@ A Swift Package is essentially a collection of source files and assets compiled 
 
 Let’s assume that we want to create an encryption/decryption library that we’d like to share with others. The first step when creating a new package is to create a new folder with the name of the package that you’d like to create, for example:
 
-``` bash
+``` shell
 mkdir CipherKit
 cd CipherKit
 ```
 
 The next step is to generate the actual package:
 
-`swift package init`
-
-```bash
-Creating library package: CipherKit
-Creating Package.swift
-Creating README.md
-Creating .gitignore
-Creating Sources/
-Creating Sources/CipherKit/CipherKit.swift
-Creating Tests/
-Creating Tests/LinuxMain.swift
-Creating Tests/CipherKitTests/
-Creating Tests/CipherKitTests/CipherKitTests.swift
-Creating Tests/CipherKitTests/XCTestManifests.swift
+```shell
+swift package init
 ```
 
-**TIP: Remember to name the folder accordingly as SPM will use the name of the folder as the actual package name when you don’t specify the name of the package manually. To manually specify the name of the package, use the `--name parameter`**
+> NOTE: Remember to name the folder accordingly as SPM will use the name of the folder as the actual package name when you don’t specify the name of the package manually. To manually specify the name of the package, use the `--name parameter`**
 
 ### Types of packages
 
@@ -70,7 +56,7 @@ You can run the following command to get a list of  available options when initi
 
 `swift package init --help`
 
-```bash
+```shell
 OVERVIEW: Initialize a new package
 
 OPTIONS:

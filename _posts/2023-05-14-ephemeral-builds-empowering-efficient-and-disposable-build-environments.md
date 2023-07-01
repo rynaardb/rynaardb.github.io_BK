@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "Ephemeral Builds - Empowering Efficient and Disposable Build Environments"
 date: 2023-05-14
-header:
-    image: /assets/images/ephemeral-builds.png
-    teaser: /assets/images/ephemeral-builds.png
-classes: wide
-categories: posts
-tags: devops ephemeral-builds iac automation build-environments disposable-builds
+categories: devops infrastructure
+tags: ephemeral-builds iac infrastructure-as-code automation build-environments disposable-builds
+image:
+    path: /assets/images/ephemeral-builds.png
 ---
 
 In the world of software development, build environments play a crucial role in producing reliable and high-quality software. Traditionally, build environments have been long-lived and shared across multiple developers. However, the concept of ephemeral builds has gained momentum, offering a fresh and disposable approach to building software. In this blog post, we will explore ephemeral builds, their benefits, and how they empower efficient and disposable build environments.

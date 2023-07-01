@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "CI/CD with GitHub Actions"
 date: 2021-05-24
-header:
-    image: /assets/images/ci-cd-github-actions.png
-    teaser: /assets/images/ci-cd-github-actions.png
-classes: wide
-categories: posts
-tags: ci cd ci/cd github actions action workflows workflow automate automation devops go golan docker microservices build unit test pipeline
+categories: devops ci-cd
+tags: ci-cd github-actions automation pipeline
+image:
+    path: /assets/images/ci-cd-github-actions.png
 ---
 
 Today's approach to software development requires software to be delivered **frequently**, **reliably**, and **efficiently**. We can achieve this by automating the process using CI/CD pipelines.
@@ -39,14 +37,13 @@ Below are some of the key features offered by GitHub Actions:
 
 Creating a new workflow requires that you create a new file with the following folder structure (within the **root folder** of your project):
 
-```bash
+```shell
 .github/workflows/my-cicd-workflow.yml
 ```
 
 > Folder and file names starting with a dot (.) are hidden. When committing and pushing your code changes, GitHub will look for your workflows within this folder structure and automatically run them accordingly.
 
-
-### Creating the YAML (.yml) workflow definition
+### YAML workflow definition
 
 GitHub Actions uses YAML to define workflow definitions. 
 
@@ -57,9 +54,8 @@ name: CI
 
 on:
   push:
-    branches: [ develop ]
-
-  workflow_dispatch:
+    branches:
+        - develop
 
 jobs:
   build-and-publish-develop:
@@ -87,6 +83,7 @@ jobs:
         image-name: my-microservice
         image-tag: develop
 ```
+{: file=".github/workflows/ci.yaml" }
 
 Let's start by dissecting the workflow file and see what makes up a typical workflow:
 
@@ -107,9 +104,8 @@ Triggers that will run our workflow. Here we tell GitHub to run our workflow as 
 ```yaml
 on:
   push:
-    branches: [ develop ]
-
-  workflow_dispatch:
+    branches:
+        - develop
 ```
 
 ### Jobs
@@ -203,7 +199,7 @@ In just this example alone, I was able to use two different community-powered ac
 
 Now that we have created our workflow definition, it is time to commit and push our code changes to GitHub:
 
-```bash
+```shell
 git add .
 git commit -m "Adding GitHub workflow"
 git push origin -u develop

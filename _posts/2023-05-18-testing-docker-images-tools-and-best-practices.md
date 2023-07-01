@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "Testing Docker Images - Tools and Best Practices"
 date: 2023-05-18
-header:
-    image: /assets/images/testing-docker-images.png
-    teaser: /assets/images/testing-docker-images.png
-classes: wide
-categories: posts
-tags: docker image testing unit testing bats testinfra serverspec best practices
+categories: devops docker
+tags: docker testing bats testinfra serverspec best-practices
+image:
+    path: /assets/images/testing-docker-images.png
 ---
 
 Testing is a crucial aspect of software development, and Docker images are no exception. Properly testing Docker images ensures their reliability, security, and compatibility across different environments. In this blog post, we will explore the importance of testing Docker images and discuss various tools, including Bats, that can aid in this process.

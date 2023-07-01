@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "Progressive Delivery Techniques in DevOps"
 date: 2023-05-16
-header:
-    image: /assets/images/progressive-delivery-techniques-in-devops.png
-    teaser: /assets/images/progressive-delivery-techniques-in-devops.png
-classes: wide
-categories: posts
-tags: progressive delivery techniques devops feature flags canary releases ab testing blue green deployments traffic shifting
+categories: devops
+tags: devops feature flags canary a-b blue-green deployments traffic-shifting
+image:
+    path: /assets/images/progressive-delivery-techniques-in-devops.png
 ---
 
 In the world of software development and operations, DevOps has emerged as a paradigm shift, facilitating seamless collaboration between development and operations teams to deliver high-quality software at scale. While the basic principles of DevOps, such as automation, continuous integration, and continuous deployment, are well-established, advanced techniques like progressive delivery have gained prominence. 

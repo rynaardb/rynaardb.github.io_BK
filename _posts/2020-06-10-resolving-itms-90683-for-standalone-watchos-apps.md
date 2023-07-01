@@ -1,18 +1,21 @@
 ---
-layout: single
+layout: post
 title: "Resolving ITMS-90683 for standalone watchOS apps"
 date: 2020-06-10
-header:
-    image: /assets/images/resolving-itms-90683.png
-    teaser: /assets/images/resolving-itms-90683.png
-classes: wide
-categories: posts
-tags: apple swiftui swift-development development swift watchos watchos-development watch-development apple-watch swiftui-app healthkit standalone watchos app testflight watchkit ITMS-90683
+categories: watchOS
+tags: watchos xcode ITMS-90683
+image:
+    path: /assets/images/resolving-itms-90683.png
 ---
 
 Early on during the development of my recent standalone watchOS app while adding HealthKit support I stumbled into a very annoying issue. Upon uploading a TestFlight build the App Store Connect upload API will fail with the following error: 
 
-`ITMS-90683: Missing Purpose String in Info.plist – Your app’s code references one or more APIs that access sensitive user data. The app’s Info.plist file should contain an NSHealthShareUsageDescription key with a user-facing purpose string explaining clearly and completely why your app needs the data.`
+```text
+ITMS-90683: Missing Purpose String in Info.plist
+Your app’s code references one or more APIs that access sensitive user data.
+The app’s Info.plist file should contain an NSHealthShareUsageDescription key
+with a user-facing purpose string explaining clearly and completely why your app needs the data.
+```
 
 Naturally, I went back and made sure that I've added the `NSHealthShareUsageDescription` key in my Info.plist for my WatchKit Extension, and sure enough, it's there. It seems for standalone watchOS apps you need to take an additional step when requesting HealthKit permissions. I'm yet to find this being documented anywhere in the Apple Developer Documentation and I'm hoping that the solution provided below will save you some time in the process.
 

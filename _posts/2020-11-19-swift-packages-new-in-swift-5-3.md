@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "Swift Packages - New in Swift 5.3"
 date: 2020-11-19
-header:
-    image: /assets/images/swift-packages.png
-    teaser: /assets/images/swift-packages.png
-classes: wide
-categories: posts
-tags: swift package manager pckages swift-package-manager spm swift-packages swift-server-side swift-dependencies ios programming xcode12 swift
+categories: swift
+tags: swift package spm swift-package-manager
+image:
+    path: /assets/images/swift-packages.png
 ---
 
 Following up on one of my [previous article](https://rynaardb.com/posts/2020/01/08/swift-package-manager-creating-packages.html), it is time to revisit Swift Packages and discover what is new in Swift 5.3 and Xcode 12 and how we can take advantage of all the new features.
@@ -22,14 +20,14 @@ Before Xcode 12, rendering SwiftUI previews for packages required a couple of wo
 
 A few essential things to keep in mind when updating your existing Swift Packages created with earlier versions of Swift or Xcode.
 
-Ensure that you update your package manifest to use the latest required tools version: 
+Ensure that you update your package manifest to use the latest required tools version:
 
 ```swift
 swift-tools-version:5.3
 ```
 
-Remember to specifiy the platforms and their versions your package supports: 
- 
+Remember to specifiy the platforms and their versions your package supports:
+
 ```swift
 platforms: [.iOS(.v13), .macOS(.v10_15), .watchOS(.v6), .tvOS(.v13)]
 ```
@@ -89,7 +87,7 @@ let package = Package(
 )
 ```
 
-**Adding files**
+#### Adding files
 
 Because `Image.png` does not have a clear purpose, we need to declare the file's intent in the package manifest. We do so by adding a `.process` action: 
 
@@ -99,7 +97,7 @@ resources: [.process("Image.png")]
 
 > Most resources should use the `.process` action for it to be transformed as appropriate at build time. The type of processing that will take place greatly depends on the platform for which the package is built.
 
-**Adding folders**
+#### Adding folders
 
 You can also add folders using the `.copy` action:
 
@@ -109,7 +107,7 @@ resources: [.copy("Zip Codes")]
 
 > Using the `.copy` action will copy the entire folder while also preserving the folder structure.
 
-**Excluding files and folders**
+#### Excluding files and folders
 
 Some files or folders might only be needed during development and can be excluded:
 
@@ -119,7 +117,7 @@ excludes: ["Release Notes.txt"]
 
 > The same syntax above also applies for excluding folders.
 
-**A couple of notes regarding resource processing:**
+### A couple of notes regarding resource processing
 
 Processing:
 
@@ -219,7 +217,7 @@ Last but not least, we now also have the ability to distribute Binary Frameworks
 
 This is especially useful for distributing closed-source binaries when you don't want or cannot distribute your source code.
 
-**Adding a binary dependency:**
+### Adding a binary dependency
 
 Adding a binary dependency is no different than adding a regular source-based Swift Package dependency. You can either add your dependency using Xcode or by adding it manually to you package manifest:
 
@@ -230,7 +228,7 @@ dependencies: [
 ]
 ```
 
-**Distributing Binary Frameworks as a Swift Package**
+### Distributing Binary Frameworks as a Swift Package
 
 Distributing Binary Frameworks as Swift Packages requires that you specifying the following in the `targets` section of your package manifest:
 
@@ -243,7 +241,7 @@ targets: [
 ]
 ```
 
-**A couple of notes regarding binary targets:**
+### A couple of notes regarding binary targets
 
 - Binary targets use XCFrameworks under the hood
 - Only supported on Apple platforms

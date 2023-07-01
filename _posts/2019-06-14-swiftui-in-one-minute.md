@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "SwiftUI in one minute"
 date: 2019-06-14
-header:
-    image: /assets/images/swiftui.png
-    teaser: /assets/images/swiftui.png
-classes: wide
-categories: posts
-tags: swift swiftui ios declarative programming wwdc2019 wwdc19 xcode11 combine previews
+categories: swiftui
+tags: swiftui
+image:
+    path: /assets/images/swiftui.png
 ---
 
 [SwiftUI](https://developer.apple.com/xcode/swiftui/), a declarative UI programming framework introduced by Apple during WWDC 2019 aims to provide a shorter path to building great user interfaces across Apple platforms.

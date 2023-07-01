@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "10 Useful CLI tools for DevOps Practitioners with practical examples"
 date: 2023-04-24
-header:
-    image: /assets/images/useful-cli-tools-for-devops-practitioners.png
-    teaser: /assets/images/useful-cli-tools-for-devops-practitioners.png
-classes: wide
-categories: posts
-tags: useful devops cli tools productivity commandline terminal
+categories: devops tools
+tags: devops cli-tools command-line terminal homebrew aws kubernets http json fuzzy-search github
+image:
+    path: /assets/images/useful-cli-tools-for-devops-practitioners.png
 ---
 
 As a DevOps practitioner, you're probably always on the lookout for ways to improve your workflow and be more productive.
@@ -35,7 +33,7 @@ Using brew, you can install and manage CLI tools and other dependencies, includi
 
 **Practical Example**
 
-```bash
+```shell
 brew install <package-name>
 or
 brew install --cask <application-name>
@@ -51,7 +49,7 @@ The AWS CLI is an essential tool if you need to manage AWS resources programmati
 
 Copy a S3 resource to a local path:
 
-```bash
+```shell
 aws s3 cp s3://<resource-name> <local-path>
 ```
 
@@ -65,7 +63,7 @@ With k9s, you can easily manage your Kubernetes clusters without leaving the ter
 
 Run k9s for a specific namespace:
 
-```bash
+```shell
 k9s -n <namespace>
 ```
 
@@ -79,7 +77,7 @@ stern is a great tool for debugging and monitoring your Kubernetes applications,
 
 Show logs for specific pods:
 
-```bash
+```shell
 stern <regex-or-pod-name>
 ```
 
@@ -103,13 +101,13 @@ With xh, you can quickly and easily make HTTP requests from the command line, wi
 
 Query a web API endpoint using request parameters:
 
-```bash
+```shell
 xh httpbin.org/json id==5
 ```
 
 Output:
 
-```json
+```shell
 HTTP/1.1 200 OK
 Access-Control-Allow-Credentials: true
 Access-Control-Allow-Origin: *
@@ -150,13 +148,13 @@ Server: gunicorn/19.9.0
 
 Filter `aws s3api` JSON response to determine whether accelerated transfer is enabled on a specific bucket:
 
-```bash
+```shell
 aws s3api get-bucket-accelerate-configuration --bucket <bucket-name> | jq '.Status' -r || true
 ```
 
 Output:
 
-```bash
+```shell
 Enabled
 ```
 
@@ -172,19 +170,19 @@ With jqp, you can quickly extract and transform data from JSON files or APIs, an
 
 Query a web api enpoint and pipe the JSON response with jqp:
 
-```bash
+```shell
 xh httpbin.org/json id==5 | jqp
 ```
 
 From jqp you can then query the JSON response, for example:
 
-```bash
+```shell
 .slideshow.slides[0].title
 ```
 
 Output:
 
-```json
+```shell
 "Wake up to WonderWidgets!"
 ```
 
@@ -200,7 +198,7 @@ Output:
 
 Checkout out a recent branch using Git and fzf:
 
-```bash
+```shell
 git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff --color=always {1}" | xargs git checkout
 ```
 
@@ -218,7 +216,7 @@ Running the above command will present a list of recent Git branches that you ca
 
 Create a Pull Request on GitHub with main as the base branch:
 
-```bash
+```shell
 gh pr create -B main
 ```
 

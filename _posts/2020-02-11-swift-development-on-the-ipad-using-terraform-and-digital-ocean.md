@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "Swift Development on the iPad using Terraform and Digital Ocean"
 date: 2020-02-11
-header:
-    image: /assets/images/ipad-development-terraform-digital-ocean.png
-    teaser: /assets/images/ipad-development-terraform-digital-ocean.png
-classes: wide
-categories: posts
-tags: apple ipad ipad-development ipad-remote-development development remote swift ipad-vm terraform terraform-ipad digital-ocean digital-ocean-ipad swift-development swift-development-ipad xode-ipad  mosh mosh-ipad
+categories: swift ipad
+tags: swift ipad remote-development terraform digital-ocean ssh mosh
+image:
+    path: /assets/images/ipad-development-terraform-digital-ocean.png
 ---
 
 Since the release of iPadOS 13, the iPad has gained a lot of useful features making it so much more of a viable option for getting real work done. That being said, it still lacks in several areas, especially in the area of Swift development.
@@ -123,6 +121,7 @@ resource "digitalocean_droplet" "web" {
   }
 }
 ```
+{: file="dev-machine.tf" }
 
 Let’s break down each section of the terraform script above:
 
@@ -177,7 +176,8 @@ apt -y install tmux
 
 # firewall rules
 sudo ufw allow 60000:61000/udp
-```  
+```
+{: file="provision.sh" }
 
 Let’s take a minute to examine what exactly the script does:
 

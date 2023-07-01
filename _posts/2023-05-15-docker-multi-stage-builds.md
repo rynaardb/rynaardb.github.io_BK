@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "Docker Multi-stage Builds"
 date: 2023-05-15
-header:
-    image: /assets/images/docker-multi-stage-builds.png
-    teaser: /assets/images/docker-multi-stage-builds.png
-classes: wide
-categories: posts
-tags: devops docker multi stage builds image layer optimization
+categories: devops docker
+tags: docker multi-stage-builds image layer optimization
+image:
+    path: /assets/images/docker-multi-stage-builds.png
 ---
 
 Docker Multi-stage builds is a powerful feature that allows you to build more efficient and smaller Docker images by utilizing multiple stages in the build process. This feature was introduced in Docker 17.05 and has since become a popular practice for optimizing container images.
@@ -46,7 +44,7 @@ Let's take a look at a practical example of how to use multi-stage builds in a D
 
 Here's an example of a Dockerfile for a Node.js application that uses multi-stage builds:
 
-```bash
+```Dockerfile
 # First stage: build the Node.js app
 FROM node:14-alpine AS builder
 WORKDIR /app

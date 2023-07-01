@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "Terraform Advanced Tips and Tricks"
 date: 2023-05-24
-header:
-    image: /assets/images/terraform-advanced-tips-and-tricks.png
-    teaser: /assets/images/terraform-advanced-tips-and-tricks.png
-classes: wide
-categories: posts
-tags: devops hashicorp terrafrom infrastructure-as-code iac automation tips tricks testing hcl
+categories: devops terraform
+tags: terrafrom iac infrastructure-as-code automation tips tricks
+image:
+    path: /assets/images/terraform-advanced-tips-and-tricks.png
 ---
 
 [Terraform](https://www.terraform.io) is a powerful tool for managing Infrastructure as Code (IaC), allowing you to provision and manage resources efficiently. While the basics of Terraform are relatively straightforward, there are several advanced tips and tricks that can enhance your Terraform workflow and help you optimize your infrastructure automation. In this blog post, we will explore some advanced techniques and best practices to take your Terraform skills to the next level.
@@ -145,7 +143,6 @@ resource "mycustomplugin_resource" "example" {
 Automated testing is crucial for validating your Terraform configurations and ensuring that your infrastructure is deployed correctly. Explore testing frameworks like [Terratest](https://github.com/gruntwork-io/terratest) or [Kitchen-Terraform](https://github.com/newcontext-oss/kitchen-terraform) to write and execute tests against your Terraform code. This helps catch potential issues or misconfigurations early in the development cycle.
 
 ```go
-// main_test.go
 
 package test
 
@@ -169,3 +166,4 @@ func TestTerraformInfrastructure(t *testing.T) {
   assert.Equal(t, "expected-value", terraform.Output(t, terraformOptions, "output_variable"))
 }
 ```
+{: file="main_test.go" }

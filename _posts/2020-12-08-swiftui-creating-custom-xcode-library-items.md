@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "SwiftUI - Creating custom Xcode library items"
 date: 2020-12-08
-header:
-    image: /assets/images/swiftui-custom-xcode-library-items.png
-    teaser: /assets/images/swiftui-custom-xcode-library-items.png
-classes: wide
-categories: posts
-tags: apple ios xcode xcode12 swift swift5.3 swift-packages swiftui swiftui-views views custom-swiftui-view view modifiers xcode library items xcode-library xcode-library-items LibraryContentProvider LibraryContentBuilder LibraryItem
+categories: swiftui
+tags: swift swiftui xcode library
+image:
+    path: /assets/images/swiftui-custom-xcode-library-items.png
 ---
 
 The Xcode library is a great way to discover and learn about available SwiftUI views and modifiers and allows you to conveniently drag and drop them to the Xcode Previews canvas without writing any code. 
@@ -42,6 +40,7 @@ struct RoundedButton: View {
     }
 }
 ```
+
 It is crucial to pay attention to the structure of our code to make it reusable in different contexts. From the example above, instead of hardcoding all the modifier values, as usual, we declare properties and assign them to the modifiers. By doing so, we can now configure and use our custom button with different configurations throughout our UI.
 
 ### Creating an Xcode LibraryItem (for views)

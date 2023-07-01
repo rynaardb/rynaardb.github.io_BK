@@ -1,0 +1,18 @@
+---
+#  The contact options.
+-
+  type: twitter
+  icon: 'fab fa-twitter'
+  url: 'https://twitter.com/rynaardb'
+-
+  type: github
+  icon: 'fab fa-github'
+  url: 'https://github.com/rynaardb'
+-
+  type: linkedin
+  icon: 'fab fa-linkedin'
+  url: 'https://www.linkedin.com/in/rynaardburger/'
+-
+  type: rss
+  icon: 'fas fa-rss'
+  noblank: true

@@ -1,13 +1,13 @@
 ---
-layout: single
+layout: post
 title: "The Future of Artificial Intelligence (AI) -Trends and Potential Impact"
 date: 2023-06-09
-header:
-    image: /assets/images/ai.png
+categories: ai
+tags: ai artificial-intelligence nlp natural-language-processing ml machine-learning deep-learning nural-network
+image:
+    path: /assets/images/ai.png
     teaser: /assets/images/ai.png
 classes: wide
-categories: posts
-tags: ai artificial intelligence npl natural-language-processing ml machine-learning deep-learning nural-network chatgpt bert
 ---
 
 Artificial Intelligence (AI) has rapidly evolved from a concept of science fiction to a transformative technology that is revolutionizing various industries. As AI continues to advance, it is crucial to understand the current trends and potential impact it holds for businesses and society. In this blog post, we will explore the future of artificial intelligence, including key trends, emerging applications, and the potential benefits and challenges it presents.

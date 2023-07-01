@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: post
 title: "Immutable Infrastructure - Building Resilient and Scalable Systems"
 date: 2023-03-15
-header:
-    image: /assets/images/immutable-infrastructure.png
-    teaser: /assets/images/immutable-infrastructure.png
-classes: wide
-categories: posts
-tags: devops immutalbe infrastructure iac terraform aws kubernetes docker deployments vms aution
+categories: devops infrastructure
+tags: immutalbe infrastructure iac infrastructure-as-code terraform cloud kubernetes docker
+image:
+    path: /assets/images/immutable-infrastructure.png
 ---
 
 In the quest for reliable and scalable infrastructure, Immutable Infrastructure has emerged as a powerful concept. By treating infrastructure as immutable, you can achieve greater resilience, scalability, and security. In this blog post, we will explore the concept of Immutable Infrastructure, its benefits, and best practices for building resilient and scalable systems.
